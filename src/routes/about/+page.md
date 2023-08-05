@@ -1,11 +1,9 @@
 ---
 layout: page
 title: About
-description: Yuyutsu was the only son of Dhritarashtra who survived the Kurukshetra war.
+description: Mark builds dashboards, designs visualizations, and reads about AI safety.
 ---
 
-Yuyutsu was the only son of Dhritarashtra who survived the Kurukshetra war.
+Mark is an analyst, researcher, and data visualization designer.
 
-<a target="_blank" href="https://github.com/sharu725/yuyutsu">
-<button>Star this project</button>
-</a>
+He builds dashboards to put data in the hands of users, designs data visualizations to communicate complex information and inspire curiosity, and reads about AI safety.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Third Post"
+title: "Next Post"
 description: "AI seems to be advancing on a weekly or even daily basis, but will it continue to develop at this breakneck speed?"
 categories:
   - AI Policy

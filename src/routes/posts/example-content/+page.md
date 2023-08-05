@@ -3,7 +3,6 @@ layout: post
 title: Example HTML Content
 description: They don’t eat up people’s gardens, don’t nest in corn cribs, they don’t do one thing but sing their hearts out for us. That’s why it’s a sin to kill a mockingbird.
 categories:
-  - nature
   - html
 date: "10th April 2021"
 edit: https://github.com/sharu725/yuyutsu/blob/master/src/routes/posts/example-content/%2Bpage.md
