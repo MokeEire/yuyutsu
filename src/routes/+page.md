@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Home
-description: "A minimal Sveltekit theme with a sidebar."
+description: "A blog about making the world better and visualizing data."
 ---
 
 <script>
@@ -16,8 +16,26 @@ description: "A minimal Sveltekit theme with a sidebar."
   $: ({ posts } = data);
 </script>
 
+Skills
+
+Experience
+
+Contact
+
+<div class="projects-container">
 {#each $paginatedPosts as post}
   <PostItem {post} />
 {/each}
+</div>
 
 <Pagination items={posts} itemsPerPage={2} />
+
+<style>
+  .projects-container {
+    display: flex;
+    max-width: 1000px;
+    margin: 3rem auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+</style>
