@@ -4,7 +4,8 @@
   const year = date.getFullYear();
 </script>
 
-<p>© {year}. {footerText}</p>
+<p>© Mark Barrett {year}.
+  {footerText}</p>
 
 <style>
   p {

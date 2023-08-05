@@ -4,12 +4,12 @@ export const menu = [
     url: "/",
   },
   {
-    title: "Categories",
-    url: "/categories",
-  },
-  {
     title: "About",
     url: "/about",
+  },
+  {
+    title: "Categories",
+    url: "/categories",
   },
   {
     title: "Contact",
@@ -17,13 +17,14 @@ export const menu = [
   },
   {
     title: "Github",
-    url: "https://github.com/sharu725/yuyutsu",
+    url: "https://github.com/MokeEire/yuyutsu",
     target: "_blank",
   },
 ];
 
-export const siteTitle = "Yuyutsu";
-export const siteDescription = "A minimal Sveltekit theme with a sidebar.";
+export const siteTitle = "Mark Barrett";
+export const siteDescription =
+  "A blog about making the world better and visualizing data.";
 
 export const footerText =
   /* <Current Year> is already prefixed */ "All rights reserved";
