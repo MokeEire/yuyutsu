@@ -26,12 +26,14 @@
     background-color: var(--sidebar-bg);
     font-size: 1rem;
     z-index: 9999;
+  font-family: var(--body-font);
   }
   
   h1 {
     color: #ddd;
     font-weight: bold;
     font-size: 2rem;
+    font-family: var(--title-font);
   }
 
   .show {

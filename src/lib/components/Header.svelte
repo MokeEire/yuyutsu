@@ -18,6 +18,7 @@
     margin: 0.5rem 0;
     font-weight: 600;
     text-align: center;
+    font-family: var(--title-font);
   }
 
   header a {
