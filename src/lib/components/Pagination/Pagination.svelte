@@ -3,7 +3,7 @@
 
   export let items = [];
   export let currentPage = 1;
-  export let itemsPerPage = 1;
+  export let itemsPerPage = 3;
 
   let numberOfPages = Math.ceil(items.length / itemsPerPage);
 
@@ -11,7 +11,7 @@
     return array.slice((page_number - 1) * page_size, page_number * page_size);
   };
 
-  $: $paginatedPosts = paginate(items, 2, currentPage);
+  $: $paginatedPosts = paginate(items, 3, currentPage);
 </script>
 
 <nav>
