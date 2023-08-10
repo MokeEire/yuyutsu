@@ -120,6 +120,11 @@ pre {
   color: var(--text-color);
 }
 
+ul {
+  list-style: square;
+  padding-left: 2.8rem;
+}
+
 main,
 .sidebar {
   transition-duration: 500ms;
