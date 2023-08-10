@@ -1,0 +1,80 @@
+[
+  {
+    "when": "1960/01/01",
+    "who": "Herbert Simon",
+    "what": "Machines would be capable of doing \"any work a man can do\"",
+    "by": "1980/01/01",
+    "category": "Human-level AI"
+  },
+  {
+    "when": "1965/01/01",
+    "who": "I.J. Good",
+    "what": "An ultra intelligent machine",
+    "by": "2000/01/01",
+    "category": "Beyond-human AI"
+  },
+  {
+    "when": "1988/01/01",
+    "who": "Moravec",
+    "what": "Human-level AI in supercomputers",
+    "by": "2010/01/01",
+    "category": "Human-level AI"
+  },
+  {
+    "when": "1993/01/01",
+    "who": "Vinge",
+    "what": "Greater-than-human intelligence",
+    "by": "2030/01/01",
+    "by_low": 2005,
+    "category": "Beyond-human AI"
+  },
+  {
+    "when": "1996/01/01",
+    "who": "Yudkowsky",
+    "what": "Singularity",
+    "by": "2021/01/01",
+    "category": "Catastrophic event"
+  },
+  {
+    "when": "1998/01/01",
+    "who": "Moravec",
+    "what": "Human-level AI",
+    "by": "2040/01/01",
+    "category": "Human-level AI"
+  },
+  {
+    "when": "1998/01/01",
+    "who": "Moravec",
+    "what": "Intelligence far beyond human",
+    "by": "2050/01/01",
+    "category": "Beyond-human AI"
+  },
+  {
+    "when": "2005/01/01",
+    "who": "Kurzweil",
+    "what": "Human-level AI",
+    "by": "2030/01/01",
+    "category": "Human-level AI"
+  },
+  {
+    "when": "2012/01/01",
+    "who": "AI researchers",
+    "what": "Development of AGI (50% confidence)",
+    "by": "2040/01/01",
+    "category": "Human-level AI"
+  },
+  {
+    "when": "2017/01/01",
+    "who": "Kurzweil",
+    "what": "Human-level AI",
+    "by": "2029/01/01",
+    "category": "Human-level AI"
+  },
+  {
+    "when": "2017/01/01",
+    "who": "Kurzweil",
+    "what": "Singularity",
+    "by": "2045/01/01",
+    "category": "Catastrophic event"
+  }
+]

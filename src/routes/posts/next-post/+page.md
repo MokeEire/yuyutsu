@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Next Post"
-description: "AI seems to be advancing on a weekly or even daily basis, but will it continue to develop at this breakneck speed?"
+title: "AI Predictions Timeline"
+description: "How have AI predictions fared throughout history?"
 categories:
   - AI Policy
 date: "3rd August 2023"
@@ -10,12 +10,10 @@ edit: https://github.com/sharu725/yuyutsu/blob/master/src/routes/posts/second-po
 image: https://picsum.photos/1000/250
 ---
 
-Predictions are hard, especially about the future, and AI compounds a lot of our uncertainty about the future. It can seem like AI is advancing on a weekly or even daily basis, but will new discoveries and applications continue to develop at this breakneck speed?
+Predictions are hard, especially about the future, and the effects of advances in AI on the speed of its own progress compounds the uncertainty about how it will develop. It can seem like AI is advancing on a weekly or even daily basis, but will new discoveries and applications continue to develop at this breakneck speed?
 
-## Why progress may get faster
+<script>
+  import AIPred from "$lib/components/AIPred.svelte";
+</script>
 
-There is huge investment in computing power, data collection, and algorithmic research.
-
-## Why progress might slow down
-
-Historically AI has progressed with big jumps followed by lulls of activity that last years or decades.
+<AIPred />
