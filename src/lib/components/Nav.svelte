@@ -37,6 +37,9 @@
     padding: 1rem 2rem;
     border-bottom: 1px solid var(--text-color);
   }
+  nav > ul {
+    list-style: none;
+  }
 
   nav ul li:first-child a {
     border-top: 1px solid var(--text-color);

@@ -13,17 +13,20 @@
 <style>
   .categories {
     display: flex;
-    margin-bottom: 1rem;
+    margin-bottom: .75rem;
+    padding: 0;
+    list-style: none;
   }
   .categories a {
     margin-right: 1rem;
-    padding: 0.05rem 0.5rem;
+    padding: .25rem 0.75rem;
     border-radius: 0.2rem;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 300;
     box-shadow: inset 0 0 5px var(--text-light);
     transition-duration: 300ms;
+    font-family: var(--title-font);
   }
   .categories a:hover {
     color: white;

@@ -34,12 +34,12 @@
     font-size: 1rem;
     color: var(--text-color);
     opacity: 0.8;
-    margin-bottom: 0rem;
+    margin-bottom: 0.5rem;
     font-family: var(--title-font);
   }
 
   .post-img {
-    margin: 2em 0;
+    margin: .5rem 0 1.5rem 0;
   }
 
   .post-desc {
