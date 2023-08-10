@@ -13,7 +13,7 @@
 <style>
   .categories {
     display: flex;
-    margin-bottom: .75rem;
+    margin-bottom: .5rem;
     padding: 0;
     list-style: none;
   }
