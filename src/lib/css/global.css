@@ -51,7 +51,7 @@ h5,
 h6 {
   margin-top: 1rem;
   color: var(--headers-color);
-  font-family: var(--header-font);
+  font-family: var(--title-font);
   font-weight: 500;
 }
 
@@ -120,7 +120,7 @@ pre {
   color: var(--text-color);
 }
 
-ul {
+.container ul {
   list-style: square;
   padding-left: 2.8rem;
 }
