@@ -11,7 +11,7 @@ image: https://media.tenor.com/M4njES4jiw4AAAAC/leon-airplane-the-movie.gif
 header: https://picsum.photos/id/1083/800/350
 ---
 
-The history of artificial intelligence is littered with experts' overestimating and underestimating how fast the technology will develop.
+The history of artificial intelligence is littered with experts' over– and underestimating how fast its technology will develop.
 As part of week 1 of BlueDot's AI Safety course, I studied the development of AI over the past decade and offered a forecast of AI progress in the near future.
 I believe we will see some revolutionary advancements in AI over the next 3-5 years but we will only see incremental progress in the next year or two.
 
@@ -61,3 +61,17 @@ Some examples of such catalyzing events that have garnered media attention over 
 
 I expect that governments around the world will institute some meaningful laws to enforce safe practices in AI development in the next few years.
 I am less confident in this belief because I know that I want it to be true.
+
+## References
+
+- [But what is a neural network?](https://www.youtube.com/watch?v=aircAruvnKk) + [Gradient descent, how neural networks learn](https://www.youtube.com/watch?v=IHZwWFHWa-w), Chapters 1-2 from [3Blue1Brown's Neural networks/Deep Learning series](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) (2017)
+
+- [Visualizing the deep learning revolution](https://medium.com/@richardcngo/visualizing-the-deep-learning-revolution-722098eb9c5), by Richard Ngo (2023)
+
+  - AI models are trained using different machine learning tasks, but the way that the systems transfer their training to real-world tasks is not well understood. We need a better understanding of the accuracy and motivations of AI models to ensure they are deployed safely, especially where AI are performing tasks that affect humans at a societal scale.
+
+- [A short introduction to machine learning](https://www.alignmentforum.org/posts/qE73pqxAZmeACsAdF/a-short-introduction-to-machine-learning), by Richard Ngo (2021)
+
+- [The AI Triad and What It Means for National Security Strategy](https://cset.georgetown.edu/wp-content/uploads/CSET-AI-Triad-Report.pdf), a paper from Georgetown's Center for Security and Emerging Technologies written by Ben Buchanan (2020)
+
+- [How ChatGPT Works Technically](https://www.youtube.com/watch?v=bSvTVREwSNw), a video breaking down the processes of ChatGPT, currently the most well known large language model (2023)
