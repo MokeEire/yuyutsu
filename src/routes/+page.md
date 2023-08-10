@@ -16,12 +16,6 @@ description: "A blog about making the world better and visualizing data."
   $: ({ posts } = data);
 </script>
 
-Skills
-
-Experience
-
-Contact
-
 <div class="projects-container">
 {#each $paginatedPosts as post}
   <PostItem {post} />
