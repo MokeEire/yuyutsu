@@ -1,34 +1,63 @@
 ---
 layout: post
-title: "Will AI progress continue at the current pace?"
-description: "AI seems to be advancing on a weekly or even daily basis, but will it continue to develop at this breakneck speed?"
+title: "The AI is getting faster"
+description: "Is it going to continue at this pace?"
 categories:
   - AI Policy
-date: "3rd August 2023"
+date: "9th August 2023"
 published: true
-edit: https://github.com/sharu725/yuyutsu/blob/master/src/routes/posts/second-post/%2Bpage.md
-image: https://picsum.photos/1000/250
+edit: https://github.com/mokeeire/yuyutsu/blob/master/src/routes/posts/ai-progress/%2Bpage.md
+image: https://media.tenor.com/M4njES4jiw4AAAAC/leon-airplane-the-movie.gif
+header: https://picsum.photos/id/1083/800/350
 ---
 
-Predictions are hard, especially about the future, and AI compounds a lot of our uncertainty about the future. It can seem like AI is advancing on a weekly or even daily basis, but will new discoveries and applications continue to develop at this breakneck speed? There are reasons to believe progress will plateau for the time being, but several potential breakthroughs lie on the horizon ready to accelerate things at a moment’s notice.
+The history of artificial intelligence is littered with experts' overestimating and underestimating how fast the technology will develop.
+As part of week 1 of BlueDot's AI Safety course, I studied the development of AI over the past decade and offered a forecast of AI progress in the near future.
+I believe we will see some revolutionary advancements in AI over the next 3-5 years but we will only see incremental progress in the next year or two.
 
-AI has been progressing rapidly on several dimensions over the past decade. We have seen big jumps in capabilities in image and text generation, emerging capabilities in strategic planning, and downright dominance in a number of different strategy games and video games.
+## What does AI need to make progress?
 
-- Image generation has gone from blurry images in the early 2010s to winning international photography competitions in the early 2020s
-- Text generation was unable to form grammatically correct sentences a decade ago. Now it demonstrates a variety of impressive conceptual reasoning abilities.
+### Better algorithms
 
-## Why progress might slow down
+Algorithms have improved significantly since the success of deep learning, but progress has relied more heavily on the increased availability of computation and data than improvements in models.
+One of the most challenging problems in AI is the alignment of these systems with human values.
+Improving the "explainability" of the underlying algorithms will be an important advance in AI research, in part because legislators have already latched onto this concept as the basis for regulating the industry.
 
-There are a few reasons to suspect AI progress will slow down in the near future:
+### More compute
 
-1. Historically, AI has progressed with big jumps followed by lulls of activity that last years or decades.
-2. The increases in computing power and availability of data over the past decade may not be replicable in the next decade
-3. The advances in recent years, ChatGPT in particular, have focused public attention on the possibilities and dangers of AI which increase the likelihood that legislators will try to intervene.
+Increasing the computing power of the machines that run AI models has been a crucial driver of progress in AI since deep learning became popular in the early 2010s.
+The graph of the Top 500 supercomputers suggests top computers might be due for a significant advance in the near future, though computers towards the bottom of the list (which are still very powerful) are improving much more slowly.
+The supercomputer currently ranked #500 is about as powerful as the top supercomputer in 2010.
+This could concentrate the priority-setting of AI research in the hands (keyboards?) of a select few supercomputer owners.
 
-These "AI winters" followed the excitement around AI in the 1950s when the field was first emerging, and again in the 1980s after initial commercial success of "expert systems".
+### More data
 
-## Why progress might continue
+It seems reasonable to assume available data will continue to increase but it is less clear is whether the newly available data is also increasingly _useful_, or at least as useful as past data.
+In systems where we are refining data collection and management, the utility of data is likely to improve.
+Fields which rely on web-scraped data from the internet may experience a deluge of new content as a result of generative AI use, but this data may not be as valuable.
+It may also amplify existing biases in the model by using the model's own output as input data.
 
-There is huge investment in computing power, data collection, and algorithmic research.
+## What might slow AI down?
 
-## Why progress may get faster
+### It has slowed down each time before
+
+AI has historically progressed in leaps and lulls.
+If we use history to gauge a base rate for AI progress, we would expect a slower period of progress to follow significant advances.
+Considering we are on the tail end of the deep learning revolution, it might be reasonable to expect the next few years to be a quieter period where progress is building towards the next big advance.
+However, the huge increase in investment in the industry, combined with the wide availability of data and compute that did not exist in prior periods of AI activity might suggest that this lull, if indeed we are in one, might be shorter than the last.
+
+### Governments might just do something
+
+Another potential stick in the spokes of accelerating AI capabilities is the potential of government intervention.
+Based on their relative proactivity in the realm of data privacy, it seems more likely that the European Union will lead the efforts to enforce safety practices in AI development than the US.
+US Senate majority Chuck Schumer(?) has also indicated interest to develop legislation, but the US framework appears to prioritize market innovation over the risks to society.
+The levers that determine safety and progress in AI development are still ambiguous to legislators, which is a hurdle for drafting effective legislation.
+It seems possible that politicians will not act before a catalyzing event provides a clearer example of what to regulate.
+Some examples of such catalyzing events that have garnered media attention over the past few years:
+
+- Google employees have leaked memos expressing beliefs that their AI system was sentient, or that AI progress cannot be controlled
+
+- Robots using AI language models told the UN that AI could do a better job governing than humans
+
+I expect that governments around the world will institute some meaningful laws to enforce safe practices in AI development in the next few years.
+I am less confident in this belief because I know that I want it to be true.
