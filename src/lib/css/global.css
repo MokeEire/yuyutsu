@@ -1,3 +1,5 @@
+@import url("$lib/css/satoshi.css");
+
 :root {
   --bg-color: #fff;
   --bg-light: #f1f1f1;
@@ -10,7 +12,8 @@
   --image-filter: brightness(1);
   --title-font: "Marcellus", serif;
   --header-font: "Fira Sans Condensed", sans-serif;
-  --body-font: "Lato", sans-serif;
+  --body-font: "Satoshi-Variable", "Rubik", "Lato", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
 }
 
 :root[data-theme="dark"] {
