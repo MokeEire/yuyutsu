@@ -1,47 +1,51 @@
 <script>
-    import data from "$lib/data/ai-pred.json";
-    import * as d3 from "d3";
-    console.log(data);
+  export let step;
+  import { tweened } from "svelte/motion";
+  import { cubicOut } from "svelte/easing";
   
-    const margin = { top: 30, right: 50, bottom: 30, left: 40 };
-  
-    let height = 400;
-    let width = 400;
-  
-    let innerHeight = height - margin.top - margin.bottom;
-    $: innerWidth = width - margin.left - margin.right;
-  
-    import { scaleLinear, scaleTime } from "d3-scale";
-    //import Line from "./lib/Line.svelte";
-  
-    
-  
-    const minDate = d3.utcYear.offset(new Date(data[0].when), -10);
-    const maxDate = new Date(data[data.length - 1].when);
-    const minYear = 1960;
-    const maxYear = 2050;
-    const minPredDate = new Date(data[0].by);
-    const maxPredDate = d3.utcYear.offset(new Date(data[data.length - 1].by), 10);
-    
-    $: xScale = scaleTime()
-      .domain([minDate, maxPredDate]) // INPUT
-      .range([0, innerWidth]); // OUTPUT
-  
-    $: yScale = scaleTime()
-      .domain([minDate, maxPredDate]) // INPUT
-      .range([innerHeight, 0]); // OUTPUT
+  export let data
+  import * as d3 from "d3";
+  import AxisX from "$lib/components/AxisX.svelte";
+  import AxisY from "$lib/components/AxisY.svelte";
+  //import HoverEvents from "$lib/components/HoverEvents.svelte";
+  //import Tooltip from "$lib/components/Tooltip.svelte";
+  let height = 400;
+  let width = 400;
+
+  const margin = { top: 30, right: 50, bottom: 30, left: 40 };
+
+  let innerHeight = height - margin.top - margin.bottom;
+  $: innerWidth = width - margin.left - margin.right;
+
+  import { scaleLinear, scaleTime } from "d3-scale";
+  //import Line from "./lib/Line.svelte";
 
   
-    import AxisX from "$lib/components/AxisX.svelte";
-    import AxisY from "$lib/components/AxisY.svelte";
-    import HoverEvents from "$lib/components/HoverEvents.svelte";
-    import Tooltip from "$lib/components/Tooltip.svelte";
+
+  const minDate = d3.utcYear.offset(new Date(data[0].when), -10);
+  const maxDate = new Date(data[data.length - 1].when);
+  const minYear = 1960;
+  const maxYear = 2050;
+  const minPredDate = new Date(data[0].by);
+  const maxPredDate = d3.utcYear.offset(new Date(data[data.length - 1].by), 10);
   
-    let hoveredDate = maxDate;
-  </script>
+  $: xScale = scaleTime()
+    .domain([minDate, maxPredDate]) // INPUT
+    .range([0, innerWidth]); // OUTPUT
+
+  $: yScale = scaleTime()
+    .domain([minDate, maxPredDate]) // INPUT
+    .range([innerHeight, 0]); // OUTPUT
+
+  $: tweenedData = data.filter((d, i) => i <= step);
+
   
-  <div class="outer">
-    <div class="chart-container" bind:clientWidth={width}>
+  let hoveredDate = maxDate;
+</script>
+  
+ <div class="chart-container" 
+    bind:offsetWidth={width}
+    bind:offsetHeight={height}>
       <h1>How experts have forecasted AI</h1>
       <svg
         {width}
@@ -60,8 +64,6 @@
           <AxisX
             height={innerHeight}
             {xScale}
-            {hoveredDate}
-            isUnhovered={hoveredDate === maxDate}
           />
           <AxisY width={innerWidth} {yScale} />
           <line 
@@ -72,7 +74,7 @@
             stroke="darkgrey"
             stroke-dasharray="8, 4"
             pointer-events="none"/>
-          {#each data as d}
+          {#each tweenedData as d}
           <circle
           cx={xScale(new Date(d.when))}
           cy={yScale(new Date(d.by))}
@@ -80,7 +82,7 @@
               fill='plum'
               stroke='black'
           />
-          <text
+<!--           <text
             x={xScale(new Date(d.when))}
             dx = "12"
             y={yScale(new Date(d.by))}
@@ -90,9 +92,9 @@
             fill="#212121">
             {d.who}
           </text>
-          {/each}
+ -->          {/each}
 
-          <HoverEvents
+<!--           <HoverEvents
           width={innerWidth}
           height={innerHeight}
           {xScale}
@@ -102,19 +104,18 @@
           {maxDate}
           bind:hoveredDate
         />
-
-        <Tooltip
+ -->
+<!--         <Tooltip
           {hoveredDate}
           {xScale}
           {yScale}
           data={data}
           color={"#5768ac"}
         />
-        </g>
+ -->        </g>
         
       </svg>
     </div>
-  </div>
   
   <style>
     .outer {
@@ -131,4 +132,9 @@
       text-align: center;
       font-weight: 600;
     }
+    .chart-container {
+    height: 80vh;
+    max-width: 100%;
+		border-radius: 5px;
+  }
   </style>
