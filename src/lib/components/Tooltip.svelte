@@ -12,7 +12,7 @@
     const getWhatValue = (date) =>
         data.filter((d) => new Date(d.when) >= date)[0]?.what;
 
-        // Format our ticks as short date strings
+    // Format our ticks as short date strings
     import { timeFormat } from "d3-time-format";
     const dateFormat = timeFormat("%Y");
 </script>
