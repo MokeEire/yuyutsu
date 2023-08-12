@@ -24,7 +24,7 @@
 <style>
   .wrapper {
     display: flex;
-    overflow: hidden;
+    contain: paint
   }
   main {
     width: 100%;
