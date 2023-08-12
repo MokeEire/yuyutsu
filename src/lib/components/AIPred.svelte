@@ -7,6 +7,8 @@
   import * as d3 from "d3";
   import AxisX from "$lib/components/AxisX.svelte";
   import AxisY from "$lib/components/AxisY.svelte";
+
+  import { fade, draw } from 'svelte/transition';
   //import HoverEvents from "$lib/components/HoverEvents.svelte";
   //import Tooltip from "$lib/components/Tooltip.svelte";
   let height = 400;
@@ -23,24 +25,21 @@
   
 
   const minDate = d3.utcYear.offset(new Date(data[0].when), -10);
-  const maxDate = new Date(data[data.length - 1].when);
-  const minYear = 1960;
-  const maxYear = 2050;
-  const minPredDate = new Date(data[0].by);
   const maxPredDate = d3.utcYear.offset(new Date(data[data.length - 1].by), 10);
   
   $: xScale = scaleTime()
-    .domain([minDate, maxPredDate]) // INPUT
+    .domain([d3.min(data, (d) => new Date(d.when)), d3.max(data, (d) => new Date(d.by))]) // INPUT
     .range([0, innerWidth]); // OUTPUT
 
-  $: yScale = scaleTime()
-    .domain([minDate, maxPredDate]) // INPUT
+  $: yScale = scaleLinear()
+    .domain([0, d3.max(data, (d) => d3.timeYear.count(new Date(d.when), new Date(d.by)))]) // INPUT
     .range([innerHeight, 0]); // OUTPUT
+  
+  
 
   $: tweenedData = data.filter((d, i) => i <= step);
 
-  
-  let hoveredDate = maxDate;
+
 </script>
   
  <div class="chart-container" 
@@ -65,65 +64,28 @@
             height={innerHeight}
             {xScale}
           />
-          <AxisY width={innerWidth} {yScale} />
+    
           <line 
-            x1={xScale(minDate)}
-            x2={xScale(maxPredDate)}
-            y1={yScale(minDate)}
-            y2={yScale(maxPredDate)}
-            stroke="darkgrey"
+            x1={xScale(new Date())}
+            x2={xScale(new Date())}
+            y1={innerHeight}
+            y2={0}
+            stroke="red"
             stroke-dasharray="8, 4"
             pointer-events="none"/>
-          {#each tweenedData as d}
-          <circle
-          cx={xScale(new Date(d.when))}
-          cy={yScale(new Date(d.by))}
-              r={5}
-              fill='plum'
-              stroke='black'
-          />
-<!--           <text
-            x={xScale(new Date(d.when))}
-            dx = "12"
-            y={yScale(new Date(d.by))}
-            dy = "-8"
-            text-anchor="start"
-            dominant-baseline="top"
-            fill="#212121">
-            {d.who}
-          </text>
- -->          {/each}
+          {#each tweenedData as d, i}
+          <path d="M {xScale(new Date(d.when))} {yScale(0.1)} C {xScale(new Date(d.when))} {yScale(0.1)}, {(xScale(new Date(d.when))+xScale(new Date(d.by)))/2} {yScale(d3.timeYear.count(new Date(d.when), new Date(d.by)))}, {xScale(new Date(d.by))} {yScale(0.1)}" stroke="black" stroke-width=2
+      fill="transparent" in:draw={{duration: 1200, delay: 400}} out:fade={{duration: 1200}} 
+          class="pred-line"
+          class:current={i===step}/>
+          {/each}
 
-<!--           <HoverEvents
-          width={innerWidth}
-          height={innerHeight}
-          {xScale}
-          {yScale}
-          {data}
-          {margin}
-          {maxDate}
-          bind:hoveredDate
-        />
- -->
-<!--         <Tooltip
-          {hoveredDate}
-          {xScale}
-          {yScale}
-          data={data}
-          color={"#5768ac"}
-        />
- -->        </g>
+         </g>
         
       </svg>
     </div>
   
   <style>
-    .outer {
-      padding: 15px;
-      background: #f0f0f0;
-      box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.15);
-      border-radius: 3px;
-    }
     h1 {
       font-size: 28px;
       line-height: 34px;
@@ -137,4 +99,17 @@
     max-width: 100%;
 		border-radius: 5px;
   }
+
+  .pred-line {
+    opacity: .25;
+    stroke-width: 1;
+  }
+
+  .pred-line.current {
+    stroke: coral;
+    stroke-linecap: round;
+    opacity: 1;
+    stroke-width: 3;
+  }
+
   </style>
