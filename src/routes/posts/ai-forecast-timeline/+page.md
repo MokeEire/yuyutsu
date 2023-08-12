@@ -27,7 +27,8 @@ Currently this is scatterplot based on the code from [Connor Rothschild's helpfu
   import steps from "$lib/data/ai-pred.json";
 
   let currentStep
-  
+  // Useful things:
+  //- https://www.svgviewer.dev/
 </script>
 
 <section>
@@ -40,9 +41,10 @@ Currently this is scatterplot based on the code from [Connor Rothschild's helpfu
         {#each steps as {when, who, what, by, category}, i}
           <div class="step" class:active={currentStep === i}>
             <div class="step-content">
-              <h1>By {dateFormat(new Date(by))}</h1>
+            <p class="date">{who} in {dateFormat(new Date(when))}</p>
+              <h1 class="pred-by">By {dateFormat(new Date(by))}</h1>
               <p>{what}</p>
-              <caption>{who} in {dateFormat(new Date(when))}</caption>
+              
             </div>
           </div>
         {/each}
@@ -53,9 +55,6 @@ Currently this is scatterplot based on the code from [Connor Rothschild's helpfu
 </section>
 
 <style>
-.spacer {
-    height: 40vh;
-  }
 
   .sticky {
     position: sticky;
@@ -69,6 +68,7 @@ Currently this is scatterplot based on the code from [Connor Rothschild's helpfu
     text-align: center;
     transition: background 100ms;
     display: flex;
+    position: relative;
   }
 
   .step {
@@ -109,6 +109,22 @@ Currently this is scatterplot based on the code from [Connor Rothschild's helpfu
     flex: 1 1 40%;
     z-index: 10;
   }
+
+  .date {
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    font-family: var(--title-font);
+    margin-bottom: 0;
+  }
+
+  .pred-by {
+    margin-top: -16px;
+  }
+
+  .spacer {
+      height: 40vh;
+    }
 
   /* Comment out the following line to always make it 'text-on-top' */
   @media screen and (max-width: 768px) {
