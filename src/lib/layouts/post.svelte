@@ -27,9 +27,6 @@
 <p class="edit"><a href={edit} target="_blank">Edit this page</a></p>
 
 <style>
-  ul > li {
-    list-style: circle;
-  }
   .date {
     font-size: 1rem;
     color: var(--text-color);
