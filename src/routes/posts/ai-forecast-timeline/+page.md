@@ -18,7 +18,7 @@ Currently this is scatterplot based on the code from [Connor Rothschild's helpfu
 
 <script>
   import Scrolly from "$lib/components/Scrolly.svelte";
-  import AIPred from "$lib/components/AIPred.svelte";
+  import AIPred from "./AIPred.svelte";
   // Format our ticks as short date strings
   import { timeFormat } from "d3-time-format";
   const dateFormat = timeFormat("%Y");
