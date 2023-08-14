@@ -21,9 +21,6 @@
 
   import { scaleLinear, scaleTime } from "d3-scale";
   //import Line from "./lib/Line.svelte";
-
-  
-
   const minDate = d3.utcYear.offset(new Date(data[0].when), -10);
   const maxPredDate = d3.utcYear.offset(new Date(data[data.length - 1].by), 10);
   
@@ -55,29 +52,51 @@
       >
         <title id="chart-title">How experts have forecasted AI</title>
         <desc id="chart-description"
-          >A dual line chart showing Donald Trump and Joe Biden's likelihood of
-          electoral victory diverging over time. At the final point, on November
-          3rd, Biden has an 89 in 100 chance of winning, and Trump has 10 in 100.</desc
+          >A chart showing forecasts of AI progress by domain experts from 1965-Present.</desc
         >
         <g transform="translate({margin.left} {margin.top})">
           <AxisX
             height={innerHeight}
             {xScale}
           />
-    
+          <!-- Line indicating present -->
           <line 
             x1={xScale(new Date())}
             x2={xScale(new Date())}
-            y1={innerHeight}
+            y1={innerHeight+10}
             y2={0}
             stroke="red"
+            stroke-width=1.5
             stroke-dasharray="8, 4"
             pointer-events="none"/>
+          <text x={xScale(new Date())-10} y="0"
+              dominant-baseline="hanging"
+              paint-order="stroke" 
+              text-anchor="end">Today</text>
+
           {#each tweenedData as d, i}
           <path d="M {xScale(new Date(d.when))} {yScale(0.1)} C {xScale(new Date(d.when))} {yScale(0.1)}, {(xScale(new Date(d.when))+xScale(new Date(d.by)))/2} {yScale(d3.timeYear.count(new Date(d.when), new Date(d.by)))}, {xScale(new Date(d.by))} {yScale(0.1)}" stroke="black" stroke-width=2
-      fill="transparent" in:draw={{duration: 1200, delay: 400}} out:fade={{duration: 1200}} 
-          class="pred-line"
-          class:current={i===step}/>
+                fill="transparent" 
+                in:draw={{duration: 1200, delay: 200}} out:fade={{delay:300, duration: 1200}} 
+          class="pred-line"/>
+          {#if i===step}
+            <path d="M {xScale(new Date(d.when))} {yScale(0.1)} C {xScale(new Date(d.when))} {yScale(0.1)}, {(xScale(new Date(d.when))+xScale(new Date(d.by)))/2} {yScale(d3.timeYear.count(new Date(d.when), new Date(d.by)))}, {xScale(new Date(d.by))} {yScale(0.1)}" stroke="black" stroke-width=2
+              fill="transparent" 
+              in:draw={{duration: 1200, delay: 200}} out:fade={{delay:100, duration: 600}} 
+              class="current pred-line"/>
+            <line x1={xScale(new Date(d.when))+5} x2={xScale(new Date(d.by))-5}
+              y1={yScale(0.2)} y2={yScale(0.2)} 
+              class="pred-distance"
+              stroke="grey" stroke-dasharray="4, 2"
+              pointer-events="none"
+              in:draw={{duration: 1200, delay: 200}} out:fade={{duration: 120}}/>
+            <text x={(xScale(new Date(d.when))+xScale(new Date(d.by)))/2} y={yScale(1.25)}
+              class="pred-distance"
+              dominant-baseline="top"
+              paint-order="stroke" 
+              text-anchor="middle"
+              in:fade={{duration: 1200, delay: 200}} out:fade={{duration: 120}}>{d3.timeYear.count(new Date(d.when), new Date(d.by))} years</text>
+          {/if}
           {/each}
 
          </g>
@@ -101,8 +120,8 @@
   }
 
   .pred-line {
-    opacity: .25;
-    stroke-width: 1;
+    opacity: .2;
+    stroke-width: .9;
   }
 
   .pred-line.current {
@@ -110,6 +129,17 @@
     stroke-linecap: round;
     opacity: 1;
     stroke-width: 3;
+  }
+
+  text.pred-distance {
+    font-size: 14px;
+    fill: var(--text-color);
+    stroke: var(--bg-color);
+    stroke-width: 6;
+  }
+
+  line.pred-distance {
+    background-color: var(--bg-color);
   }
 
   </style>
