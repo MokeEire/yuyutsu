@@ -8,10 +8,10 @@ date: "9th August 2023"
 published: true
 edit: https://github.com/mokeeire/yuyutsu/blob/master/src/routes/posts/ai-progress/%2Bpage.md
 image: https://media.tenor.com/M4njES4jiw4AAAAC/leon-airplane-the-movie.gif
-header: https://picsum.photos/id/1083/800/350
+header: https://images.unsplash.com/photo-1506818144585-74b29c980d4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80
 ---
 
-The history of artificial intelligence is littered with experts' over– and underestimating how fast its technology will develop.
+The history of artificial intelligence is littered with experts' over– and underestimating how fast the technology will develop.
 As part of week 1 of BlueDot's AI Safety course, I studied the development of AI over the past decade and offered a forecast of AI progress in the near future.
 I believe we will see some revolutionary advancements in AI over the next 3-5 years but we will only see incremental progress in the next year or two.
 
@@ -19,14 +19,18 @@ I believe we will see some revolutionary advancements in AI over the next 3-5 ye
 
 ### Better algorithms
 
-Algorithms have improved significantly since the success of deep learning, but progress has relied more heavily on the increased availability of computation and data than improvements in models.
-One of the most challenging problems in AI is the alignment of these systems with human values.
-Improving the "explainability" of the underlying algorithms will be an important advance in AI research, in part because legislators have already latched onto this concept as the basis for regulating the industry.
+Algorithms have improved significantly since the success of deep learning, but progress is often attributed to the increased availability of computation and data.
+In areas like computer vision, [improvements in algorithms were at least as important as increased availability compute](https://epochai.org/blog/revisiting-algorithmic-progress) while increased data seemed to be far less important. 
+Most of the improvements in algorithms were "compute-augmenting algorithmic advances" focused on getting better performance from less computational power.
+Going forward, improving the "explainability" of the underlying algorithms will be vital for AI progress. 
+*Explainability* means the party responsible for deploying an AI system can explain how the models work, how they process data, and how they come to particular conclusions.
+This will be important for AI progress in part because legislators have already latched onto this concept as the basis for regulating the industry, and more importantly because explainability will inform our understanding of AI systems' **alignment**, or how the systems align with human values.
 
 ### More compute
 
-Increasing the computing power of the machines that run AI models has been a crucial driver of progress in AI since deep learning became popular in the early 2010s.
-The graph of the Top 500 supercomputers suggests top computers might be due for a significant advance in the near future, though computers towards the bottom of the list (which are still very powerful) are improving much more slowly.
+Increasing the computing power of the machines that run AI models has been a crucial driver of progress in AI since deep learning became popular in the early 2010s. 
+As mentioned above, improvements in compute availability were equally responsible for progress made in computer vision.
+[The graph of the Top 500 supercomputers](https://www.top500.org/statistics/perfdevel/) suggests top computers might be due for a significant advance in the near future, though computers towards the bottom of the list (which are still very powerful) are improving much more slowly.
 The supercomputer currently ranked #500 is about as powerful as the top supercomputer in 2010.
 This could concentrate the priority-setting of AI research in the hands (keyboards?) of a select few supercomputer owners.
 
@@ -68,10 +72,10 @@ I am less confident in this belief because I know that I want it to be true.
 
 - [Visualizing the deep learning revolution](https://medium.com/@richardcngo/visualizing-the-deep-learning-revolution-722098eb9c5), by Richard Ngo (2023)
 
-  - AI models are trained using different machine learning tasks, but the way that the systems transfer their training to real-world tasks is not well understood. We need a better understanding of the accuracy and motivations of AI models to ensure they are deployed safely, especially where AI are performing tasks that affect humans at a societal scale.
-
 - [A short introduction to machine learning](https://www.alignmentforum.org/posts/qE73pqxAZmeACsAdF/a-short-introduction-to-machine-learning), by Richard Ngo (2021)
 
 - [The AI Triad and What It Means for National Security Strategy](https://cset.georgetown.edu/wp-content/uploads/CSET-AI-Triad-Report.pdf), a paper from Georgetown's Center for Security and Emerging Technologies written by Ben Buchanan (2020)
 
 - [How ChatGPT Works Technically](https://www.youtube.com/watch?v=bSvTVREwSNw), a video breaking down the processes of ChatGPT, currently the most well known large language model (2023)
+
+- [Algorithmic progress in computer vision](https://arxiv.org/abs/2212.05153), a paper
