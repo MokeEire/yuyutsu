@@ -48,7 +48,6 @@
   @media screen and (max-width: 768px) {
     img {
       height: 200px;
-      object-fit: contain;
       object-position: center;
     }
   }

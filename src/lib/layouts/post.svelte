@@ -27,6 +27,13 @@
 <p class="edit"><a href={edit} target="_blank">Edit this page</a></p>
 
 <style>
+  .post-desc {
+    color: var(--text-color);
+    width: 100%;
+    font-style: italic;
+    text-align: inherit;
+  }
+  
   .date {
     font-size: 1rem;
     color: var(--text-color);
@@ -37,14 +44,9 @@
 
   .post-img {
     margin: .5rem 0 1.5rem 0;
+    object-fit: cover;
   }
 
-  .post-desc {
-    color: var(--text-color);
-    width: 100%;
-    font-style: italic;
-    text-align: inherit;
-  }
 
   .edit {
     display: flex;
