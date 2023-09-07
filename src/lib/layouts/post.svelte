@@ -4,7 +4,7 @@
   import { siteTitle } from "$lib/constants";
 
   export let data;
-  export let title, description, date, categories, edit, image, header;
+  export let title, description, date, categories, image, header;
 
   const seo = {
     title: `${title} | ${siteTitle}`,
@@ -17,16 +17,23 @@
 
 <Seo {...seo} />
 
-<h1>{title}</h1>
-<caption class="post-desc">{description}</caption>
-<p class="date">{date}</p>
-<Categories {categories} />
-<img class = "post-img" width="100%" height="300" src={header} alt={title} />
+<div class="post-header">
+  <h1>{title}</h1>
+  <caption class="post-desc">{description}</caption>
+  <p class="date">{date}</p>
+  <Categories {categories} />
+  <img class = "post-img" width="100%" height="300" src={header} alt={title} />
+</div>
+
 
 <slot />
-<p class="edit"><a href={edit} target="_blank">Edit this page</a></p>
 
 <style>
+  .post-header {
+    max-width: 1000px;
+    padding-left: 1rem;
+    padding-right: 1rem
+  }
   .post-desc {
     color: var(--text-color);
     width: 100%;
@@ -48,12 +55,6 @@
   }
 
 
-  .edit {
-    display: flex;
-  }
-  .edit a {
-    margin-left: auto;
-  }
   img {
     object-fit: cover;
     object-position: center;
