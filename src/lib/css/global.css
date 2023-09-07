@@ -123,9 +123,13 @@ pre {
   color: var(--text-color);
 }
 
-.container ul {
+article.container ul {
   list-style: square;
   padding-left: 2.8rem;
+}
+article.container > nav > ul {
+  list-style: none;
+  padding-left: 0;
 }
 
 main,
