@@ -3,7 +3,7 @@
 :root {
   --bg-color: #fff;
   --bg-light: #f1f1f1;
-  --brand-color: #333;
+  --brand-color: #4F8EB2;
   --text-color: #555;
   --headers-color: #333;
   --text-light: #bbb;
@@ -81,16 +81,17 @@ h5 {
 h6 {
   font-size: 1.1rem;
 }
-
 a {
-  text-decoration: underline;
+  text-decoration: underline 0.15em rgba(255, 255, 255, 0);
   color: var(--brand-color);
-  transition-duration: var(--duration-300);
+  transition: all 390ms ease-in-out;
 }
 
 a:hover {
-  color: var(--text-color);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
+
 
 img {
   max-width: 100%;
