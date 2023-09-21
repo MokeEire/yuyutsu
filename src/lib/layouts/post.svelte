@@ -31,8 +31,10 @@
 <style>
   .post-header {
     max-width: 1000px;
-    padding-left: 1rem;
-    padding-right: 1rem
+  }
+  
+  h1 {
+    line-height: 1.3;
   }
   .post-desc {
     color: var(--text-color);
@@ -59,6 +61,7 @@
     object-fit: cover;
     object-position: center;
   }
+  
 
   @media screen and (max-width: 800px) {
     h1 {
