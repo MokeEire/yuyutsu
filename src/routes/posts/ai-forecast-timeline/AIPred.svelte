@@ -26,6 +26,7 @@
   
   $: xScale = scaleTime()
     .domain([d3.min(data, (d) => new Date(d.when)), d3.max(data, (d) => new Date(d.by))]) // INPUT
+    .nice()
     .range([0, innerWidth]); // OUTPUT
 
   $: yScale = scaleLinear()
@@ -69,16 +70,20 @@
             stroke-width=1.5
             stroke-dasharray="8, 4"
             pointer-events="none"/>
+          <!-- Present label -->
           <text x={xScale(new Date())-10} y="0"
               dominant-baseline="hanging"
               paint-order="stroke" 
               text-anchor="end">Today</text>
 
+          <!-- Create path for each data point -->
           {#each tweenedData as d, i}
           <path d="M {xScale(new Date(d.when))} {yScale(0.1)} C {xScale(new Date(d.when))} {yScale(0.1)}, {(xScale(new Date(d.when))+xScale(new Date(d.by)))/2} {yScale(d3.timeYear.count(new Date(d.when), new Date(d.by)))}, {xScale(new Date(d.by))} {yScale(0.1)}" stroke="black" stroke-width=2
                 fill="transparent" 
-                in:draw={{duration: 1200, delay: 200}} out:fade={{delay:300, duration: 1200}} 
+                in:draw={{duration: 1200, delay: 200}} 
+                out:fade={{delay:300, duration: 1200}} 
           class="pred-line"/>
+          <!-- Create path for each data point -->
           {#if i===step}
             <path d="M {xScale(new Date(d.when))} {yScale(0.1)} C {xScale(new Date(d.when))} {yScale(0.1)}, {(xScale(new Date(d.when))+xScale(new Date(d.by)))/2} {yScale(d3.timeYear.count(new Date(d.when), new Date(d.by)))}, {xScale(new Date(d.by))} {yScale(0.1)}" stroke="black" stroke-width=2
               fill="transparent" 
