@@ -1,79 +1,125 @@
 [
   {
-    "when": "1960/01/01",
+    "when": "1965/01/01",
     "who": "Herbert Simon",
-    "what": "Machines would be capable of doing \"any work a man can do\"",
-    "by": "1980/01/01",
-    "category": "Human-level AI"
+    "biolink": "https://en.wikipedia.org/wiki/Herbert_A._Simon",
+    "what": ["Simon said in 1965 that \"machines will be capable, within twenty years, of doing any work a man can do\".", 
+            "He predicted humans will be needed most in blue collar jobs and work where \"face-to-face human interaction is of the essence\"."],
+    "by": "1985/01/01",
+    "category": "Human-level AI",
+    "ref": "The shape of automation for men and management",
+    "reflink": "https://openlibrary.org/books/OL5948759M/The_shape_of_automation_for_men_and_management"
   },
   {
-    "when": "1965/01/01",
+    "when": "1964/01/01",
     "who": "I.J. Good",
-    "what": "An ultra intelligent machine",
+    "biolink": "https://en.wikipedia.org/wiki/I._J._Good",
+    "what": ["A british mathematician that worked on cryptography with Alan Turing, I.J. Good predicted \"[i]t is more probable than not that, within the twentieth century, an ultraintelligent machine will be built\".",
+              "Good was optimistic about the aftermath, calling it an \"intelligence explosion\" (i.e. singularity) and in fact he believed humans' survival depends on inventing ultraintelligent AI."],
     "by": "2000/01/01",
-    "category": "Beyond-human AI"
+    "category": "Beyond-human AI",
+    "ref": "Speculations Concerning the First Ultraintelligent Machine",
+    "reflink": "https://exhibits.stanford.edu/feigenbaum/catalog/gz727rg3869"
+  },
+  {
+    "when": "1967/01/01",
+    "who": "Marvin Minsky",
+    "biolink": "https://en.wikipedia.org/wiki/Marvin_Minsky",
+    "what": ["A cognitive and computer scientist, and also a co-founder of MIT's Artificial Intelligence lab, Marvin Minsky predicted AI would be able to replicate almost every aspect of intelligence within a generation (~20-30 years).",
+              "Although the wording was a little ambiguous, (\"...few compartments of intellect will remain outside the machine's realm...\"), he followed up with the claim that \"the problems of creating 'artificial intelligence' will be substantially solved\"."],
+    "by": "1997/01/01",
+    "category": "Human-level AI",
+    "ref": "Computation: finite and infinite machines",
+    "reflink": "https://archive.org/details/computationfinit0000mins"
   },
   {
     "when": "1988/01/01",
     "who": "Moravec",
-    "what": "Human-level AI in supercomputers",
+    "biolink": "https://en.wikipedia.org/wiki/Herbert_A._Simon",
+    "what": ["Human-level AI in supercomputers"],
     "by": "2010/01/01",
-    "category": "Human-level AI"
+    "category": "Human-level AI",
+    "ref": "The shape of automation for men and management",
+    "reflink": "https://openlibrary.org/books/OL5948759M/The_shape_of_automation_for_men_and_management"
   },
   {
     "when": "1993/01/01",
     "who": "Vinge",
-    "what": "Greater-than-human intelligence",
+    "biolink": "",
+    "what": ["Greater-than-human intelligence"],
     "by": "2030/01/01",
-    "category": "Beyond-human AI"
+    "category": "Beyond-human AI",
+    "ref": "",
+    "reflink": ""
   },
   {
     "when": "1996/01/01",
     "who": "Yudkowsky",
-    "what": "Singularity",
+    "biolink": "",
+    "what": ["Singularity"],
     "by": "2021/01/01",
-    "category": "Catastrophic event"
+    "category": "Catastrophic event",
+    "ref": "",
+    "reflink": ""
   },
   {
     "when": "1998/01/01",
     "who": "Moravec",
-    "what": "Human-level AI",
+    "biolink": "",
+    "what": ["Human-level AI"],
     "by": "2040/01/01",
-    "category": "Human-level AI"
+    "category": "Human-level AI",
+    "ref": "",
+    "reflink": ""
   },
   {
     "when": "1998/01/01",
     "who": "Moravec",
-    "what": "Intelligence far beyond human",
+    "biolink": "",
+    "what": ["Intelligence far beyond human"],
     "by": "2050/01/01",
-    "category": "Beyond-human AI"
+    "category": "Beyond-human AI",
+    "ref": "",
+    "reflink": ""
   },
   {
     "when": "2005/01/01",
     "who": "Kurzweil",
-    "what": "Human-level AI",
+    "biolink": "",
+    "what": ["Human-level AI"],
     "by": "2030/01/01",
-    "category": "Human-level AI"
+    "category": "Human-level AI",
+    "ref": "",
+    "reflink": ""
   },
   {
     "when": "2012/01/01",
     "who": "AI researchers",
-    "what": "Development of AGI (50% confidence)",
+    "biolink": "",
+    "what": ["Development of AGI (50% confidence)"],
     "by": "2040/01/01",
-    "category": "Human-level AI"
+    "category": "Human-level AI",
+    "ref": "",
+    "reflink": ""
   },
   {
     "when": "2017/01/01",
     "who": "Kurzweil",
-    "what": "Human-level AI",
+    "biolink": "",
+    "what": ["Human-level AI"],
     "by": "2029/01/01",
-    "category": "Human-level AI"
+    "category": "Human-level AI",
+    "ref": "",
+    "reflink": ""
   },
   {
     "when": "2017/01/01",
     "who": "Kurzweil",
-    "what": "Singularity",
+    "biolink": "",
+    "what": ["Singularity"],
     "by": "2045/01/01",
-    "category": "Catastrophic event"
+    "category": "Catastrophic event",
+    "ref": "",
+    "reflink": ""
   }
 ]
