@@ -1,20 +1,22 @@
 ---
 layout: post
-title: "AI forecasts timeline"
-description: "How have AI predictions fared throughout history?"
+title: "A history of AI forecasts"
+description: "Predictions are hard, especially about AI's future."
 categories:
   - AI Policy
+  - Dataviz
 date: "3rd August 2023"
 published: true
-edit: https://github.com/sharu725/yuyutsu/blob/master/src/routes/posts/second-post/%2Bpage.md
-image: https://picsum.photos/1000/250
+image: "/posts/ai-forecast-timeline/header.png"
 header: https://images.unsplash.com/photo-1590055531615-f16d36ffe8ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80
 ---
 
-I compiled a list of forecasts about AI's future and wanted to display them on a timeline.
-How far into the future have they been looking?
-Have they been right?
-Currently this is scatterplot based on the code from [Connor Rothschild's helpful workshop](https://github.com/connorrothschild/iib-svelte-workshop-chart/tree/master), but I am aiming to build it into a timeline/chord diagram in future.
+<section class="body-text">
+  I compiled a list of forecasts about AI's future and wanted to display them on a timeline.
+  How far into the future have they been looking?
+  Have they been right?
+  With the help of Connor Rothschild's <a href="https://github.com/connorrothschild/iib-svelte-workshop-chart/tree/master">Svelte+D3 workshop</a> and <a href="https://www.connorrothschild.com/post/svelte-scrollytelling">scrollytelling tutorial</a>, I put together a timeline/chord diagram to see what our brightest minds have predicted about AI's.
+</section>
 
 <script>
   import Scrolly from "$lib/components/Scrolly.svelte";
@@ -38,13 +40,16 @@ Currently this is scatterplot based on the code from [Connor Rothschild's helpfu
       </div>
     <div class="steps-container">
       <Scrolly bind:value={currentStep}>
-        {#each steps as {when, who, what, by, category}, i}
+        {#each steps as {when, who, biolink, what, by, category, ref, reflink}, i}
           <div class="step" class:active={currentStep === i}>
             <div class="step-content">
-            <p class="date">{who} in {dateFormat(new Date(when))}</p>
-              <h1 class="pred-by">By {dateFormat(new Date(by))}</h1>
-              <p>{what}</p>
-              
+            <p class="date"><a href={biolink}>{who}</a> in {dateFormat(new Date(when))}</p>
+              <h2 class="pred-by">{category}</h2>
+              <h3 class="pred-by">By {dateFormat(new Date(by))}</h3>
+              {#each what as w}
+                <p>{w}</p>
+                {/each}
+              <caption><a href={reflink}>{ref}</a></caption>
             </div>
           </div>
         {/each}
@@ -55,12 +60,15 @@ Currently this is scatterplot based on the code from [Connor Rothschild's helpfu
 </section>
 
 <style>
-
+  section.body-text {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
   .sticky {
     position: sticky;
     top: 10%;
-		flex: 1 1 60%;
-    width: 60%;
+		flex: 1 1 50%;
+    width: 50%;
   }
 
   .section-container {
@@ -99,6 +107,12 @@ Currently this is scatterplot based on the code from [Connor Rothschild's helpfu
 		background: white;
 		color: black;
 	}
+
+  .step-content > caption {
+    text-align: right;
+    font-size: .9rem;
+    font-family: var(--title-font);
+  }
 	
   .steps-container,
   .sticky {
@@ -106,7 +120,7 @@ Currently this is scatterplot based on the code from [Connor Rothschild's helpfu
   }
 
   .steps-container {
-    flex: 1 1 40%;
+    flex: 1 1 50%;
     z-index: 10;
   }
 
@@ -119,7 +133,7 @@ Currently this is scatterplot based on the code from [Connor Rothschild's helpfu
   }
 
   .pred-by {
-    margin-top: -16px;
+    margin-top: -12px;
   }
 
   .spacer {
