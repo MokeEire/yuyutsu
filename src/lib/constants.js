@@ -17,7 +17,7 @@ export const menu = [
   },
   {
     title: "Github",
-    url: "https://github.com/MokeEire/yuyutsu",
+    url: "https://github.com/MokeEire/",
     target: "_blank",
   },
 ];
