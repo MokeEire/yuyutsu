@@ -1,5 +1,7 @@
 <script>
   import Seo from "$lib/components/Seo.svelte";
+  import BibliographyList from "$lib/components/Citations/BibliographyList.svelte";
+  import CiteArticle from "$lib/components/Citations/CiteArticle.svelte";
   import Categories from "$lib/components/Categories.svelte";
   import { siteTitle } from "$lib/constants";
 
@@ -27,6 +29,8 @@
 
 
 <slot />
+
+<BibliographyList />
 
 <style>
   .post-header {
