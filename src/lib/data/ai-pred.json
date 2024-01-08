@@ -34,19 +34,19 @@
   },
   {
     "when": "1988/01/01",
-    "who": "Moravec",
-    "biolink": "https://en.wikipedia.org/wiki/Herbert_A._Simon",
+    "who": "Hans Moravec",
+    "biolink": "https://en.wikipedia.org/wiki/Hans_Moravec",
     "what": ["Human-level AI in supercomputers"],
     "by": "2010/01/01",
     "category": "Human-level AI",
-    "ref": "The shape of automation for men and management",
-    "reflink": "https://openlibrary.org/books/OL5948759M/The_shape_of_automation_for_men_and_management"
+    "ref": "",
+    "reflink": ""
   },
   {
     "when": "1993/01/01",
-    "who": "Vinge",
-    "biolink": "",
-    "what": ["Greater-than-human intelligence"],
+    "who": "Vernor Vinge",
+    "biolink": "https://en.wikipedia.org/wiki/Vernor_Vinge",
+    "what": ["\"I believe that the creation of greater than human intelligence will occur during the next thirty years...Just so I'm not guilty of a relative-time ambiguity, let me more specific: I'll be surprised if this event occurs before 2005 or after 2030.\""],
     "by": "2030/01/01",
     "category": "Beyond-human AI",
     "ref": "",
@@ -63,28 +63,8 @@
     "reflink": ""
   },
   {
-    "when": "1998/01/01",
-    "who": "Moravec",
-    "biolink": "",
-    "what": ["Human-level AI"],
-    "by": "2040/01/01",
-    "category": "Human-level AI",
-    "ref": "",
-    "reflink": ""
-  },
-  {
-    "when": "1998/01/01",
-    "who": "Moravec",
-    "biolink": "",
-    "what": ["Intelligence far beyond human"],
-    "by": "2050/01/01",
-    "category": "Beyond-human AI",
-    "ref": "",
-    "reflink": ""
-  },
-  {
     "when": "2005/01/01",
-    "who": "Kurzweil",
+    "who": "Ray Kurzweil",
     "biolink": "",
     "what": ["Human-level AI"],
     "by": "2030/01/01",
@@ -104,7 +84,7 @@
   },
   {
     "when": "2017/01/01",
-    "who": "Kurzweil",
+    "who": "Ray Kurzweil",
     "biolink": "",
     "what": ["Human-level AI"],
     "by": "2029/01/01",
@@ -114,7 +94,7 @@
   },
   {
     "when": "2017/01/01",
-    "who": "Kurzweil",
+    "who": "Ray Kurzweil",
     "biolink": "",
     "what": ["Singularity"],
     "by": "2045/01/01",
