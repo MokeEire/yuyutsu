@@ -47,9 +47,9 @@ header: https://images.unsplash.com/photo-1590055531615-f16d36ffe8ec?ixlib=rb-4.
               <h2 class="pred-by">{category}</h2>
               <h3 class="pred-by">By {dateFormat(new Date(by))}</h3>
               {#each what as w}
-                <p>{w}</p>
+                <p>{@html w}</p>
                 {/each}
-              <caption><a href={reflink}>{ref}</a></caption>
+              <caption><a href={reflink}>Source</a></caption>
             </div>
           </div>
         {/each}
@@ -57,6 +57,10 @@ header: https://images.unsplash.com/photo-1590055531615-f16d36ffe8ec?ixlib=rb-4.
       </Scrolly>
     </div>
   </div>
+</section>
+
+<section class="body-text">
+  So far, none of these predictions have been correct.
 </section>
 
 <style>

@@ -119,7 +119,7 @@
       font-weight: 600;
     }
     .chart-container {
-    height: 80vh;
+    height: 50vh;
     max-width: 100%;
 		border-radius: 5px;
   }
