@@ -11,3 +11,5 @@ Currently, I am learning about AI safety and governance through BlueDot Impact's
 I have experience working on policy research on [myriad topics](https://www.rand.org/pubs/authors/b/barrett_mark.html) including justice, emerging technologies, and disaster relief as part of the RAND Corporation. 
 
 Since the pandemic, I have been helping organizations develop their analytics capacity, building dashboards to put data in the hands of our customers, and designing data visualizations to communicate complex information to different audiences.
+
+I recently completed a course in AI governance ([check it out](https://aisafetyfundamentals.com/) if you're interested in taking the course yourself) because I believe managing the risks of emerging technologies like artificial intelligence will be essential to ensuring better global outcomes in our lives and beyond.
