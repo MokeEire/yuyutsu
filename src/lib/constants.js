@@ -53,7 +53,7 @@ export const siteTitle = "Mark Barrett";
 export const siteDescription =
   "A blog about making the world better and visualizing data.";
 
-export const mePic = "/static/me-canada.jpeg";
+export const mePic = "/me-canada.jpeg";
 
 export const footerText =
   /* <Current Year> is already prefixed */ "All rights reserved";
