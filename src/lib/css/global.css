@@ -43,7 +43,7 @@ body {
 p {
   color: var(--text-color);
   font-size: 16px;
-  margin-bottom: 1.2rem;
+  margin-top: 1.2rem;
 }
 
 h1,
@@ -81,15 +81,16 @@ h5 {
 h6 {
   font-size: 1.1rem;
 }
-a {
-  text-decoration: underline 0.15em rgba(255, 255, 255, 0);
-  color: var(--brand-color);
-  transition: all 390ms ease-in-out;
-}
 
-a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
+
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+    monospace;
+  font-size: 0.9em;
+  background-color: #d8d3d369;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  color: #ce3131d7;
 }
 
 
