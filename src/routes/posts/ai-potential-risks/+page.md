@@ -1,15 +1,17 @@
 ---
 layout: post
-title: "Where AI is likely to cause harm"
-description: "Understanding the AI risk landscape"
+title: "What could go wrong with AI?"
+description: "An overview of the ongoing harms, risks, and doomsday placards."
 categories:
   - AI Policy
-date: "16th August 2023"
+date: 2023-08-16
 published: true
 image: https://images.unsplash.com/photo-1529027288157-572df421f425?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80
 header: https://images.unsplash.com/photo-1529027288157-572df421f425?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80
 ---
 
+Artificial intelligence (AI) is an exciting and scary technology.
+It has already been used to push forward our knowledge of biology, 
 As artificial intelligence develops, [scientists are loudly warning the public of the potentially catastrophic risks](https://arxiv.org/abs/2306.12001) from misuse of the technology, accidents in system development and deployment, and possibly even rogue AI systems themselves. 
 To explore the likelihood and danger of each risk, let’s first define some terms. 
 **Misuse** is knowingly harmful (human) behaviour that leverages AI to achieve malicious aims, while **accidents** are unanticipated or unknowingly harmful actions that occur in development or deployment of AI systems. 

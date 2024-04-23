@@ -4,7 +4,7 @@ title: "The AI is getting faster"
 description: "Is it going to continue at this pace?"
 categories:
   - AI Policy
-date: "9th August 2023"
+date: 2023-08-09
 published: true
 edit: https://github.com/mokeeire/yuyutsu/blob/master/src/routes/posts/ai-progress/%2Bpage.md
 image: https://media.tenor.com/M4njES4jiw4AAAAC/leon-airplane-the-movie.gif

@@ -6,7 +6,7 @@
   import { siteTitle } from "$lib/constants";
 
   export let data;
-  export let title, description, date, categories, image, header;
+  export let title, description, date, categories, image, header, showHeader = true;
 
   const seo = {
     title: `${title} | ${siteTitle}`,
@@ -14,19 +14,26 @@
     image,
   };
 
-  $: recentPosts = data.posts
+  $: recentPosts = data.posts;
+
+  $: actualDate = new Date(date);
 </script>
 
 <Seo {...seo} />
 
 <div class="post-header">
   <h1>{title}</h1>
-  <caption class="post-desc">{description}</caption>
-  <p class="date">{date}</p>
+  {#if description}
+    <caption class="post-desc">{description}</caption>
+    {/if}
+  {#if date}
+  <p class="date">{actualDate.toLocaleDateString()}</p>
+  {/if}
   <Categories {categories} />
-  <img class = "post-img" width="100%" height="300" src={header} alt={title} />
+  {#if showHeader}
+  <img class="post-img" width="100%" height="300" src={header} alt={title} />
+  {/if}
 </div>
-
 
 <slot />
 
@@ -36,7 +43,7 @@
   .post-header {
     max-width: 1000px;
   }
-  
+
   h1 {
     line-height: 1.3;
   }
@@ -46,26 +53,35 @@
     font-style: italic;
     text-align: inherit;
   }
-  
+
   .date {
     font-size: 1rem;
     color: var(--text-color);
     opacity: 0.8;
-    margin-bottom: 0.5rem;
+    margin: 0.5rem 0;
     font-family: var(--title-font);
   }
 
   .post-img {
-    margin: .5rem 0 1.5rem 0;
+    margin: 0.5rem 0 1.5rem 0;
     object-fit: cover;
   }
-
 
   img {
     object-fit: cover;
     object-position: center;
   }
-  
+
+  a {
+    text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+    color: var(--brand-color);
+    transition: all 390ms ease-in-out;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
 
   @media screen and (max-width: 800px) {
     h1 {
