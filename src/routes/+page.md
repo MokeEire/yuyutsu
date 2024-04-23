@@ -40,7 +40,7 @@ description: "A blog about making the world better and visualizing data."
 {/each}
 </div>
 
-<Pagination items={posts} itemsPerPage={2} />
+<Pagination items={posts} itemsPerPage={3} />
 
 <style>
 .card-about {
