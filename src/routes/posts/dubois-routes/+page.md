@@ -63,10 +63,16 @@ Below is my (in progress) attempt to recreate one of his plates from _The Georgi
   import Clip from "./Clip.svelte";
 </script>
 
+<div class="plate">
+  <div class='chart-title'>
+      <h1>The Georgia Negro.</h1>
+    <span>A Social Study</span>
+    <span>By</span>
+    <span>W.E. Burghardt Du Bois</span>
+    </div>
 <div class="chart-container" bind:clientWidth={width}>
-  <h1>A Rotating Globe of Data</h1>
-  <h2>Population by Country, 2021</h2>
-    <svg {width} {height} >
+    
+    <svg class="globes" {width} {height} >
       <!-- Globe -->
       <!-- svelte-ignore a11y-click-events-have-key-events --->
       <Globe cx={width*.25} {height} radius={height/2} {tooltipData} />
@@ -91,17 +97,71 @@ Below is my (in progress) attempt to recreate one of his plates from _The Georgi
       <path d={path(borders)} fill="none" stroke="#fefefe80" />
       <!-- Selected country Borders -->
     </svg>
-  
+
+    <div class='chart-desc'>
+      <p>This case is devoted to a series of charts, maps and other devi–ces designed to illustrate the development of the American Negro in a single typical state of the United States.</p>
+      <p>"The problem of the 20th century is the problem of the color-line."</p>
+      </div>
+    
+</div>
 </div>
 
 <style>
-  .chart-container {
+  @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+  .plate {
+    margin: 20vh auto;
+    background: #e3cfbc;
+    padding: 4px 16px;
+    border-radius: 6px;
+  }
+
+  .chart-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15vh;
+    line-height: 1.2;
+  }
+
+  .plate h1, span, p {
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    font-family: "Public Sans", sans-serif;
+  }
+
+  .chart-title h1 {
+    font-weight: 700
+  }
+
+  .chart-title span {
+    font-weight: 600
+  }
+
+  .chart-desc {
+    margin: 15vh 5vh;
+    text-indent: 15%;
+  }
+
+  .chart-desc p {
+    font-weight: 100;
+    word-wrap: break-word; 
+    line-height: 1.25;
+    hyphens: auto;
+  }
+
+  .chart-desc p:not(last-of-type) {
+    text-align: left;
+    letter-spacing: 1.25px;
+  }
+
+  .globes {
     max-width: 968px;
-    margin: 0 auto;
+    margin: 15vh 0;
   }
 
   svg {
-    overflow: visible;
+    overflow: hidden;
+    margin: 4px 0;
   }
 
 
