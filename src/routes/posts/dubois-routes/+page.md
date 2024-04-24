@@ -77,11 +77,13 @@ Below is my (in progress) attempt to recreate one of his plates from _The Georgi
       <!-- svelte-ignore a11y-click-events-have-key-events --->
       <Globe cx={width*.25} {height} radius={height/2} {tooltipData} />
       <Globe cx={width*.75} {height} radius={height/2} {tooltipData} />
+      <Clip id="globe-shape" {width} {height} />
       <!-- Countries -->
       {#each countries as country}
         <!-- svelte-ignore a11y-click-events-have-key-events --->
         <path
           d={path(country)}
+          fill="none"
           stroke="none"
           on:click={() => {
             tooltipData = country;
@@ -90,11 +92,12 @@ Below is my (in progress) attempt to recreate one of his plates from _The Georgi
             tooltipData = country;
           }}
           tabIndex="0"
+          clip-path="url(#globe-shape)" 
         />
       {/each}
   
-      <!-- Borders -->
-      <path d={path(borders)} fill="none" stroke="#fefefe80" />
+      <!-- Borders / Outline -->
+      <path d={path(outline)} fill="none" stroke="black" clip-path="url(#globe-shape)" />
       <!-- Selected country Borders -->
     </svg>
 
