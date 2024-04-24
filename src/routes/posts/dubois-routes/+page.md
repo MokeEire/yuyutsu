@@ -60,6 +60,7 @@ Below is my (in progress) attempt to recreate one of his plates from _The Georgi
   let tooltipData;
 
   import Globe from "./Globe.svelte";
+  import Clip from "./Clip.svelte";
 </script>
 
 <div class="chart-container" bind:clientWidth={width}>
