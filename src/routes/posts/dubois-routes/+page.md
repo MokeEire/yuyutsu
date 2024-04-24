@@ -28,8 +28,14 @@ Below is my (in progress) attempt to recreate one of his plates from _The Georgi
     (a, b) => a !== b
   );
 
+  let outline = topojson.mesh(
+    world,
+    world.objects.countries,
+    (a, b) => a === b
+  );
 
-  import { geoOrthographic, geoPath, geoCentroid, geoEqualEarth, geoClipCircle } from "d3-geo";
+
+  import { geoOrthographic, geoPath, geoCentroid, geoEqualEarth, geoEquirectangular, geoMercator, geoStereographic } from "d3-geo";
   //import { geoBaker } from "d3-geo-projection";
   import { scaleLinear } from "d3-scale";
   import { max } from "d3-array";
@@ -39,9 +45,13 @@ Below is my (in progress) attempt to recreate one of his plates from _The Georgi
   $: height = width/2;
 
   // Projection function
-  $: projection = geoEqualEarth()
-    .scale(height / 2) // How big the projection is
-    .rotate([50, -10, 0]) // How the projection is rotated
+  $: projection = geoEquirectangular()
+    //.scale(height * .35) // geoEqualEarth
+    //.rotate([25, -10, -0]) // geoEqualEarth
+    .scale(height * .3) // geoEquirectangular
+    .rotate([30, 0, 0]) // geoEquirectangular
+    //.scale(height * .3) // geoMercator
+    //.rotate([30, -0, -10]) // geoMercator
     .translate([width / 2, height / 2]); // Where the projection is centered
 
   // Path generator
