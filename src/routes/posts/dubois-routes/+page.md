@@ -111,6 +111,7 @@ Below is my (in progress) attempt to recreate one of his plates from _The Georgi
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
   .plate {
     margin: 20vh auto;
     background: #e3cfbc;
@@ -125,7 +126,7 @@ Below is my (in progress) attempt to recreate one of his plates from _The Georgi
     line-height: 1.2;
   }
 
-  .plate h1, span, p {
+  .plate h1, .plate span, .plate p {
     text-align: center;
     text-transform: uppercase;
     color: black;
@@ -142,7 +143,6 @@ Below is my (in progress) attempt to recreate one of his plates from _The Georgi
 
   .chart-desc {
     margin: 15vh 5vh;
-    text-indent: 15%;
   }
 
   .chart-desc p {
@@ -152,9 +152,10 @@ Below is my (in progress) attempt to recreate one of his plates from _The Georgi
     hyphens: auto;
   }
 
-  .chart-desc p:not(last-of-type) {
+  .chart-desc :not(p:last-of-type) {
     text-align: left;
     letter-spacing: 1.25px;
+    text-indent: 15%;
   }
 
   .globes {
