@@ -9,6 +9,7 @@
 <circle
   class="globe"
   fill="#d7b89c"
+  stroke="black"
   cx={cx}
   cy={height/2}
   r={radius}
