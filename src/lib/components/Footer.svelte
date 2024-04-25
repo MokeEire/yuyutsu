@@ -28,5 +28,6 @@
   footer.bottom {
     color: var(--text-color);
     text-align: center;
+    margin: 15vh 0 5vh;
   }
 </style>
