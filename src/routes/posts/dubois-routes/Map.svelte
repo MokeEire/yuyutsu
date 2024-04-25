@@ -37,12 +37,8 @@
 
   // Projection function
   $: projection = geoEquirectangular()
-    //.scale(height * .35) // geoEqualEarth
-    //.rotate([25, -10, -0]) // geoEqualEarth
     .scale(height * 0.3) // geoEquirectangular
     .rotate([30, 0, 0]) // geoEquirectangular
-    //.scale(height * .3) // geoMercator
-    //.rotate([30, -0, -10]) // geoMercator
     .translate([width / 2, height / 2]); // Where the projection is centered
 
   // Path generator
@@ -52,8 +48,6 @@
 
   import Globe from "./Globe.svelte";
   import Clip from "./Clip.svelte";
-
-
 </script>
 
 <div class="plate">
