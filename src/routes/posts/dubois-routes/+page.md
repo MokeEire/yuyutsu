@@ -17,7 +17,7 @@ showHeader: false
 
 <Map />
 
-**Please Note**: Racial terminology in this post is from, or referencing, scientific work from the late 1800s and early 1900s. It's not clear to me whether to change the language or preserve the context, so I chose the latter because I felt the language is one of the elements which makes Du Bois' work so powerful. If you feel I should change it, please let me know. I am open to hearing other views.
+**Please Note**: Racial terminology in this post is from, or referencing, scientific work from the late 1800s and early 1900s. It's not clear to me whether to change the language or preserve the context, so I chose the latter because I felt the language is one of the elements which makes Du Bois' work so powerful. Race is often a sensitive subject for people, so if you have thoughts or comments about how this work is presented please reach out to me.
 
 The [Du Bois Visualization Challenge](https://www.datavisualizationsociety.org/news/2024/2/2/advance-your-data-viz-skills-with-the-weekly-2024-du-bois-visualization-challenge) honours the social scientist and data visualization pioneer, W.E.B. Du Bois.
 Below is my (in progress) attempt to recreate one of his plates from _The Georgia Negro_ study
