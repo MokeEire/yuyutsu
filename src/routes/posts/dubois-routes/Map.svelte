@@ -106,8 +106,7 @@
         />
       {/each}
         <!-- Selected country Borders -->
-      </svg
-    >
+    </svg>
 
     <div class="chart-desc">
       <p>
@@ -117,10 +116,9 @@
       </p>
       <p>"The problem of the 20th century is the problem of the color-line."</p>
     </div>
-    <span class="caption"
-      >Source: <a href="https://www.slavevoyages.org/voyage/database"
+    <p class="caption">
+      Source: <a href="https://www.slavevoyages.org/voyage/database"
         >Trans-Atlantic Slave Trade Database</a
-      ></span
     >
   </div>
 </div>
