@@ -128,7 +128,7 @@
   @import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
   .plate {
-    margin: 10vh auto;
+    margin-bottom: 10vh;
     background: #e3cfbc;
     padding: 4px 16px;
     border-radius: 6px;
