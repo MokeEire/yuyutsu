@@ -137,6 +137,10 @@
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
+  .chart-container {
+    width: 90%;
+    margin: auto;
+  }
   .plate {
     margin-bottom: 10vh;
     background: #e3cfbc;
@@ -145,12 +149,13 @@
     text-transform: uppercase;
     text-align: center;
     font-family: "Public Sans", sans-serif;
+    opacity: .9;
   }
 
   .chart-title {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15vh;
+    margin-bottom: 5vh;
     line-height: 1.2;
     font-family: "Public Sans", sans-serif;
     color: black;
@@ -163,6 +168,7 @@
 
   .chart-title h1 {
     font-weight: 700;
+    margin: 1rem 0;
   }
 
   .chart-title span {
@@ -170,7 +176,7 @@
   }
 
   .chart-desc {
-    margin: 15vh 5vh;
+    margin: 1.5rem 0 2rem;
   }
 
   .chart-desc p {
@@ -184,11 +190,13 @@
     text-align: left;
     letter-spacing: 1.25px;
     text-indent: 15%;
+    margin-bottom: 1rem;
   }
 
   .globes {
     max-width: 968px;
-    margin: 15vh 0;
+    margin: 5vh 0 3vh;
+    opacity: .85;
   }
 
   svg {
