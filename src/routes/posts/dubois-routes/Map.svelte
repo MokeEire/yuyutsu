@@ -107,6 +107,16 @@
       {/each}
       <!-- Selected country Borders -->
     </svg>
+    <div class='legend'>
+        <div class='legend-item'>
+            <span>&#8803;</span>
+            <span>Routes of the African slave trade.</span>
+        </div>
+        <div class='legend-item'>
+            <span>&#10026;</span>
+            <span>The State of Georgia.</span>
+        </div>
+    </div>
 
     <div class="chart-desc">
       <p>
@@ -184,6 +194,27 @@
   svg {
     overflow: hidden;
     margin: 4px 0;
+  }
+
+  .legend {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    margin: 0 auto;
+    width: 50%;
+    text-align: left;
+    opacity: .75;
+    font-size: 1.1rem;
+  }
+
+  .legend span {
+    font-weight: 100;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
   }
 
   .caption {
