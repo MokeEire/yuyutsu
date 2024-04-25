@@ -105,7 +105,7 @@
           })}
         />
       {/each}
-        <!-- Selected country Borders -->
+      <!-- Selected country Borders -->
     </svg>
 
     <div class="chart-desc">
@@ -119,92 +119,92 @@
     <p class="caption">
       Source: <a href="https://www.slavevoyages.org/voyage/database"
         >Trans-Atlantic Slave Trade Database</a
-    >
+      >
+    </p>
   </div>
 </div>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-  
-    .plate {
-      margin: 20vh auto;
-      background: #e3cfbc;
-      padding: 4px 16px;
-      border-radius: 6px;
-      text-transform: uppercase;
-      text-align: center;
-      font-family: "Public Sans", sans-serif;
-    }
-  
-    .chart-title {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 15vh;
-      line-height: 1.2;
-      font-family: "Public Sans", sans-serif;
-      color: black;
-    }
-  
-    .chart-title h1 {
-      color: black;
-      font-family: "Public Sans", sans-serif;
-    }
-  
-    .chart-title h1 {
-      font-weight: 700
-    }
-  
-    .chart-title span {
-      font-weight: 600
-    }
-  
-    .chart-desc {
-      margin: 15vh 5vh;
-    }
-  
-    .chart-desc p {
-      font-weight: 100;
-      word-wrap: break-word; 
-      line-height: 1.25;
-      hyphens: auto;
-    }
-  
-    .chart-desc :not(p:last-of-type) {
-      text-align: left;
-      letter-spacing: 1.25px;
-      text-indent: 15%;
-    }
-  
-    .globes {
-      max-width: 968px;
-      margin: 15vh 0;
-    }
-  
-    svg {
-      overflow: hidden;
-      margin: 4px 0;
-    }
-  
-    h1,
-    h2 {
-      color: white;
-      text-align: center;
-    }
-  
-    h1 {
-      font-size: 1.75rem;
-      font-weight: 800;
-      margin-bottom: 0.3rem;
-    }
-  
-    h2 {
-      font-size: 1.25rem;
-      font-weight: 200;
-      margin-bottom: 1rem;
-    }
-  
-    .caption {
-      text-align: right;
-    }
-    
-  </style>
+  @import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+  .plate {
+    margin: 10vh auto;
+    background: #e3cfbc;
+    padding: 4px 16px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Public Sans", sans-serif;
+  }
+
+  .chart-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15vh;
+    line-height: 1.2;
+    font-family: "Public Sans", sans-serif;
+    color: black;
+  }
+
+  .chart-title h1 {
+    color: black;
+    font-family: "Public Sans", sans-serif;
+  }
+
+  .chart-title h1 {
+    font-weight: 700;
+  }
+
+  .chart-title span {
+    font-weight: 600;
+  }
+
+  .chart-desc {
+    margin: 15vh 5vh;
+  }
+
+  .chart-desc p {
+    font-weight: 100;
+    word-wrap: break-word;
+    line-height: 1.25;
+    hyphens: auto;
+  }
+
+  .chart-desc :not(p:last-of-type) {
+    text-align: left;
+    letter-spacing: 1.25px;
+    text-indent: 15%;
+  }
+
+  .globes {
+    max-width: 968px;
+    margin: 15vh 0;
+  }
+
+  svg {
+    overflow: hidden;
+    margin: 4px 0;
+  }
+
+  h1,
+  h2 {
+    color: white;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+  }
+
+  .caption {
+    text-align: right;
+  }
+</style>
