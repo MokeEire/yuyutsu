@@ -77,7 +77,7 @@
         stroke="black"
         clip-path="url(#globe-shape)"
       />
-
+      
       <!-- Countries -->
       {#each countries as country}
         <!-- svelte-ignore a11y-click-events-have-key-events --->
@@ -180,7 +180,7 @@
 
   .chart-title h1 {
     font-weight: 700;
-    margin: 1rem 0;
+    margin: 1rem 0 0;
   }
 
   .chart-title span {
