@@ -44,6 +44,12 @@
   // Path generator
   $: path = geoPath().projection(projection);
 
+  let georgiaCoords = [
+          -81.0753,
+          32.0967
+        ];
+
+
   let tooltipData;
 
   import Globe from "./Globe.svelte";
@@ -105,6 +111,12 @@
           })}
         />
       {/each}
+      <!-- Georgia point -->
+      <text
+      color="black"
+    transform="translate({projection(georgiaCoords)})"
+    dx="-5" dy="1"
+    >&#10026;</text>
       <!-- Selected country Borders -->
     </svg>
     <div class='legend'>
