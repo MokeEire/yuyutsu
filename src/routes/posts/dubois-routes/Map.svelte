@@ -186,24 +186,6 @@
     margin: 4px 0;
   }
 
-  h1,
-  h2 {
-    color: white;
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 1.75rem;
-    font-weight: 800;
-    margin-bottom: 0.3rem;
-  }
-
-  h2 {
-    font-size: 1.25rem;
-    font-weight: 200;
-    margin-bottom: 1rem;
-  }
-
   .caption {
     text-align: right;
   }
