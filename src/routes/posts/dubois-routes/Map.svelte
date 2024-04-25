@@ -1,6 +1,7 @@
 <script>
   import world from "$lib/data/110m.json";
   import * as topojson from "topojson-client";
+  import routes from "$lib/data/routes-simple.json";
 
   let countries = topojson.feature(world, world.objects.countries).features;
 
@@ -29,6 +30,7 @@
   import { scaleLinear } from "d3-scale";
   import { max } from "d3-array";
   import { timer } from "d3-timer";
+  import { draw } from "svelte/transition";
 
   let width = 600;
   $: height = width / 2;
@@ -94,7 +96,21 @@
           clip-path="url(#globe-shape)"
         />
       {/each}
-      
+      <!-- Routes -->
+      {#each routes as route, i}
+        <path
+          in:draw={{ delay: 600 + 150 * i, duration: 1800 }}
+          fill="none"
+          stroke="black"
+          d={path({
+            type: "Feature",
+            geometry: {
+                type: "LineString",
+            coordinates: route.coords
+            },
+          })}
+        />
+      {/each}
         <!-- Selected country Borders -->
       </svg
     >

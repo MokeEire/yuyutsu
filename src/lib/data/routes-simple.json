@@ -1,0 +1,87 @@
+[
+    {
+      "Source": "\"Western Africa\"",
+      "Destination": "\"Brazil\"",
+      "coords": [
+        [
+          14.7587,
+          -22.1929
+        ],
+        [
+            -38.4388, -12.9200
+        ]
+      ]
+    },
+    {
+      "Source": "\"Bight of Biafra\"",
+      "coords": [
+        [
+          8.3330,
+          4.9749
+        ],
+        [
+          -9.1493,
+          2.7206
+        ],
+        [
+          -59.7691,
+          13.1131
+        ]
+      ],
+      "Destination": "\"Caribbean\""
+    },
+    {
+      "Source": "\"Bight of Biafra\"",
+      "coords": [
+        [
+          8.3330,
+          4.9749
+        ],
+        [
+          -9.1493,
+          2.7206
+        ],
+        [
+          -81.0753,
+          32.0967
+        ]
+      ],
+      "Destination": "\"Georgia\""
+    },
+    {
+      "Source": "\"Bight of Biafra\"",
+      "coords": [
+        [
+          8.3330,
+          4.9749
+        ],
+        [
+          -9.1493,
+          2.7206
+        ],
+        [
+          -72.0539,
+          41.5398
+        ]
+      ],
+      "Destination": "\"Northeast US\""
+    },
+    {
+      "Source": "\"Bight of Biafra\"",
+      "coords": [
+        [
+          8.3330,
+          4.9749
+        ],
+        [
+          -9.1493,
+          2.7206
+        ],
+        [
+          -9.0285,
+          38.6751
+        ]
+      ],
+      "Destination": "\"Europe\""
+    }
+  ]
