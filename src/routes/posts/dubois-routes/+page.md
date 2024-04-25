@@ -11,16 +11,16 @@ header: https://images.unsplash.com/photo-1506818144585-74b29c980d4b?ixlib=rb-4.
 showHeader: false
 ---
 
-**Please Note**: Racial terminology in this post is from, or referencing, scientific work from the late 1800s and early 1900s. It's not clear to me whether to change the language or preserve the context, so I chose the latter because I felt the language is one of the elements which makes Du Bois' work so powerful. If you feel I should change it, please let me know. I am open to hearing other views.
-
-The [Du Bois Visualization Challenge](https://www.datavisualizationsociety.org/news/2024/2/2/advance-your-data-viz-skills-with-the-weekly-2024-du-bois-visualization-challenge) honours the social scientist and data visualization pioneer, W.E.B. Du Bois.
-Below is my (in progress) attempt to recreate one of his plates from _The Georgia Negro_ study
-
 <script>
   import Map from './Map.svelte'
 </script>
 
 <Map />
+
+**Please Note**: Racial terminology in this post is from, or referencing, scientific work from the late 1800s and early 1900s. It's not clear to me whether to change the language or preserve the context, so I chose the latter because I felt the language is one of the elements which makes Du Bois' work so powerful. If you feel I should change it, please let me know. I am open to hearing other views.
+
+The [Du Bois Visualization Challenge](https://www.datavisualizationsociety.org/news/2024/2/2/advance-your-data-viz-skills-with-the-weekly-2024-du-bois-visualization-challenge) honours the social scientist and data visualization pioneer, W.E.B. Du Bois.
+Below is my (in progress) attempt to recreate one of his plates from _The Georgia Negro_ study
 
 # Process
 
