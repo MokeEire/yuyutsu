@@ -17,97 +17,49 @@ The [Du Bois Visualization Challenge](https://www.datavisualizationsociety.org/n
 Below is my (in progress) attempt to recreate one of his plates from _The Georgia Negro_ study
 
 <script>
-    import world from "$lib/data/110m.json";
-  import * as topojson from "topojson-client";
-
-  let countries = topojson.feature(world, world.objects.countries).features;
-
-  let borders = topojson.mesh(
-    world,
-    world.objects.countries,
-    (a, b) => a !== b
-  );
-
-  let outline = topojson.mesh(
-    world,
-    world.objects.countries,
-    (a, b) => a === b
-  );
-
-
-  import { geoOrthographic, geoPath, geoCentroid, geoEqualEarth, geoEquirectangular, geoMercator, geoStereographic } from "d3-geo";
-  //import { geoBaker } from "d3-geo-projection";
-  import { scaleLinear } from "d3-scale";
-  import { max } from "d3-array";
-  import { timer } from "d3-timer";
-
-  let width = 600;
-  $: height = width/2;
-
-  // Projection function
-  $: projection = geoEquirectangular()
-    //.scale(height * .35) // geoEqualEarth
-    //.rotate([25, -10, -0]) // geoEqualEarth
-    .scale(height * .3) // geoEquirectangular
-    .rotate([30, 0, 0]) // geoEquirectangular
-    //.scale(height * .3) // geoMercator
-    //.rotate([30, -0, -10]) // geoMercator
-    .translate([width / 2, height / 2]); // Where the projection is centered
-
-  // Path generator
-  $: path = geoPath().projection(projection);
-
-  let tooltipData;
-
-  import Globe from "./Globe.svelte";
-  import Clip from "./Clip.svelte";
+  import Map from './Map.svelte'
 </script>
 
-<div class="plate">
-  <div class='chart-title'>
-      <h1>The Georgia Negro.</h1>
-    <span>A Social Study</span>
-    <span>By</span>
-    <span>W.E. Burghardt Du Bois</span>
-    </div>
-<div class="chart-container" bind:clientWidth={width}>
-    
-    <svg class="globes" {width} {height} >
-      <!-- Globe -->
-      <!-- svelte-ignore a11y-click-events-have-key-events --->
-      <Globe cx={width*.25} {height} radius={height/2} {tooltipData} />
-      <Globe cx={width*.75} {height} radius={height/2} {tooltipData} />
-      <Clip id="globe-shape" {width} {height} />
-      <!-- Countries -->
-      {#each countries as country}
-        <!-- svelte-ignore a11y-click-events-have-key-events --->
-        <path
-          d={path(country)}
-          fill="none"
-          stroke="none"
-          on:click={() => {
-            tooltipData = country;
-          }}
-          on:focus={() => {
-            tooltipData = country;
-          }}
-          tabIndex="0"
-          clip-path="url(#globe-shape)" 
-        />
-      {/each}
-  
-      <!-- Borders / Outline -->
-      <path d={path(outline)} fill="none" stroke="black" clip-path="url(#globe-shape)" />
-      <!-- Selected country Borders -->
-    </svg>
+<Map />
 
-    <div class='chart-desc'>
-      <p>This case is devoted to a series of charts, maps and other devi–ces designed to illustrate the development of the American Negro in a single typical state of the United States.</p>
-      <p>"The problem of the 20th century is the problem of the color-line."</p>
-      </div>
-    
-</div>
-</div>
+# Process
+
+1. Create the twin globes
+2. Style the plates
+3. Prepare the data
+4. Draw the paths
+5. Draw the regions
+
+## Create the twin globes
+
+## Style the plates
+
+## Prepare the data
+
+The data for this challenge is provided in the [GitHub repo](https://github.com/ajstarks/dubois-data-portraits/tree/master/challenge/2024/challenge04) in the `routes` and `route-pairs` CSV files.
+I opened the data using R and did some basic descriptive statistics checks and summarised the data to make sure I was getting the same results as the `route-pairs` summary file.
+I initially summarised the number of voyages and slaves carried by the port of origin and arrival.
+It turns out this was instructive because the `route-pairs` actually used the place of purchase rather than port of origin as the source.
+
+One challenge was the ambiguity of geographic information.
+For example, the most common route in the slave trade data was between "Costa da Mina" and "Bahia, port unspecified". 
+Costa da Mina appears to be a region that encompasses modern day Ghana, Togo, Benin, and Nigeria, so I had to make the decision of how to plot this region on the map.
+In cases like these, I chose a midpoint in the region.
+I used [geojson.io](https://geojson.io) to plot the ~200 locations, cross-referencing the locations in the data with the [map](https://www.slavevoyages.org/voyage/database#maps) in the Trans-Atlantic Slave Trade Database.
+
+Sources for this part of the work:
+
+- https://www.slavevoyages.org/blog/tag/intro-maps
+- https://web.archive.org/web/20181030091133id_/https://www.cambridge.org/core/services/aop-cambridge-core/content/view/B19B462581852D91BE63F59180DAAB7B/S0361541300003788a.pdf/div-class-title-ethnicities-of-enslaved-africans-in-the-diaspora-on-the-meanings-of-mina-again-div.pdf
+- https://publications.iai.spk-berlin.de/servlets/MCRFileNodeServlet/Document_derivate_00001091/BIA_119_036_068.pdf
+- https://www.quora.com/Was-Mina-the-Portuguese-name-for-Ghana
+- https://en.wikipedia.org/wiki/Kingdom_of_Bonny
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10502851/
+- https://www.cambridge.org/core/journals/international-review-of-social-history/article/expansion-of-slavery-in-benguela-during-the-nineteenth-century/4A502CB651CEA5CB1249605978352A87
+
+## Draw the paths
+
+## Draw the regions
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
@@ -117,6 +69,9 @@ Below is my (in progress) attempt to recreate one of his plates from _The Georgi
     background: #e3cfbc;
     padding: 4px 16px;
     border-radius: 6px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Public Sans", sans-serif;
   }
 
   .chart-title {
@@ -124,11 +79,11 @@ Below is my (in progress) attempt to recreate one of his plates from _The Georgi
     flex-direction: column;
     margin-bottom: 15vh;
     line-height: 1.2;
+    font-family: "Public Sans", sans-serif;
+    color: black;
   }
 
-  .plate h1, .plate span, .plate p {
-    text-align: center;
-    text-transform: uppercase;
+  .chart-title h1 {
     color: black;
     font-family: "Public Sans", sans-serif;
   }
@@ -168,15 +123,9 @@ Below is my (in progress) attempt to recreate one of his plates from _The Georgi
     margin: 4px 0;
   }
 
-
-  path {
+  path.country {
     cursor: pointer;
   }
-
-  path:focus {
-    outline: none;
-  }
-
   h1,
   h2 {
     color: white;
@@ -193,6 +142,10 @@ Below is my (in progress) attempt to recreate one of his plates from _The Georgi
     font-size: 1.25rem;
     font-weight: 200;
     margin-bottom: 1rem;
+  }
+
+  .caption {
+    text-align: right;
   }
   
 </style>
