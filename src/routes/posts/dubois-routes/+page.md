@@ -20,7 +20,7 @@ showHeader: false
 **Please Note**: Racial terminology in this post is from, or referencing, scientific work from the late 1800s and early 1900s. It's not clear to me whether to change the language or preserve the context, so I chose the latter because I felt the language is one of the elements which makes Du Bois' work so powerful. Race is often a sensitive subject for people, so if you have thoughts or comments about how this work is presented please reach out to me.
 
 The [Du Bois Visualization Challenge](https://www.datavisualizationsociety.org/news/2024/2/2/advance-your-data-viz-skills-with-the-weekly-2024-du-bois-visualization-challenge) honours the social scientist and data visualization pioneer, W.E.B. Du Bois.
-Below is my (in progress) attempt to recreate one of his plates from _The Georgia Negro_ study
+Below is my (in progress) attempt to recreate the introductory visualization of _The Georgia Negro_ study, created by Du Bois for a scientific exhibit in Paris in 1900.
 
 # Process
 
@@ -37,6 +37,10 @@ Below is my (in progress) attempt to recreate one of his plates from _The Georgi
 ## Prepare the data
 
 The data for this challenge is provided in the [GitHub repo](https://github.com/ajstarks/dubois-data-portraits/tree/master/challenge/2024/challenge04) in the `routes` and `route-pairs` CSV files.
+ recreate Du Bois' map, we don't actually need either dataset. 
+We need the coordinates of the 5 slave trade routes and the polygons to depict the destinations of these African slaves to the western hemisphere.
+For this, I used [geojson.io](https://geojson.io) to select the coordinates of the sources and destinations of the routes according to Du Bois' visualization while cross-referencing the locations with this [map](https://www.slavevoyages.org/voyage/database#maps) from the Trans Atlantic Slave Trade Database.
+<!--
 I opened the data using R and did some basic descriptive statistics checks and summarised the data to make sure I was getting the same results as the `route-pairs` summary file.
 I initially summarised the number of voyages and slaves carried by the port of origin and arrival.
 It turns out this was instructive because the `route-pairs` actually used the place of purchase rather than port of origin as the source.
@@ -45,7 +49,7 @@ One challenge was the ambiguity of geographic information.
 For example, the most common route in the slave trade data was between "Costa da Mina" and "Bahia, port unspecified". 
 Costa da Mina appears to be a region that encompasses modern day Ghana, Togo, Benin, and Nigeria, so I had to make the decision of how to plot this region on the map.
 In cases like these, I chose a midpoint in the region.
-I used [geojson.io](https://geojson.io) to plot the ~200 locations, cross-referencing the locations in the data with the [map](https://www.slavevoyages.org/voyage/database#maps) in the Trans-Atlantic Slave Trade Database.
+ to plot the ~200 locations in the Trans-Atlantic Slave Trade Database. -->
 
 Sources for this part of the work:
 
