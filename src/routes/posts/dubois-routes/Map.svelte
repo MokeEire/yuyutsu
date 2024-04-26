@@ -1,10 +1,13 @@
 <script>
   import world from "$lib/data/110m.json";
   import * as topojson from "topojson-client";
+  import rewind from "@turf/rewind";
   import routes from "$lib/data/routes-simple.json";
+  import mapShapes from "$lib/data/mapShapes.json";
 
   let countries = topojson.feature(world, world.objects.countries).features;
-
+  let featuresRewind = rewind(mapShapes, { reverse: true }).features;
+  console.log(featuresRewind);
   let borders = topojson.mesh(
     world,
     world.objects.countries,
@@ -95,6 +98,27 @@
           tabIndex="0"
           clip-path="url(#globe-shape)"
         />
+      {/each}
+
+      {#each featuresRewind as shape}
+        {#if shape.properties.type === "source"}
+          <path
+            d={path(shape)}
+            fill={shape.properties.fill}
+            stroke="none"
+            opacity={shape.properties.opacity}
+            tabIndex="0"
+          />
+        {:else if shape.properties.type === "destination"}
+          <path
+            in:fade={{ delay: 1000, duration: 5000, easing: quartInOut }}
+            d={path(shape)}
+            fill={shape.properties.fill}
+            stroke="none"
+            opacity={shape.properties.opacity}
+            tabIndex="0"
+          />
+        {/if}
       {/each}
       <!-- Routes -->
       {#each routes as route, i}
