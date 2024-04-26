@@ -112,11 +112,21 @@
         />
       {/each}
       <!-- Georgia point -->
+      <circle
+        cx={projection(georgiaCoords)[0]}
+        cy={projection(georgiaCoords)[1]}
+        r="4.5"
+        fill="#fff"
+        />
       <text
-      color="black"
+          class="georgia-label"
+        fill="black"
     transform="translate({projection(georgiaCoords)})"
-    dx="-5" dy="1"
-    >&#10026;</text>
+        dx="-5"
+        dominant-baseline="middle"
+        text-anchor="start"
+        dy="1">&#10026;</text
+      >
       <!-- Selected country Borders -->
     </svg>
     <div class='legend'>
