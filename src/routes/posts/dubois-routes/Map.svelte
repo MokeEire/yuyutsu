@@ -260,4 +260,9 @@
   .caption {
     text-align: right;
   }
+
+  .country {
+    fill: #d7b0177a;
+  }
+
 </style>
