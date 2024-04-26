@@ -1,14 +1,14 @@
 <script>
     export let cx;
     export let height;
-    export let radius;
     export let toolTipData;
+
+    $: radius = height / 2
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events --->
 <circle
   class="globe"
-  fill="#d7b89c"
   stroke="black"
   cx={cx}
   cy={height/2}
@@ -23,5 +23,7 @@
 />
 
 <style>
-    
+    .globe {
+        fill: #6c96bb21;
+    }
 </style>

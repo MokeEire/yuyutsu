@@ -67,8 +67,8 @@
     <svg class="globes" {width} {height}>
       <!-- Globe -->
       <!-- svelte-ignore a11y-click-events-have-key-events --->
-      <Globe cx={width * 0.25} {height} radius={height / 2} {tooltipData} />
-      <Globe cx={width * 0.75} {height} radius={height / 2} {tooltipData} />
+      <Globe cx={width * 0.25} {height} {tooltipData} />
+      <Globe cx={width * 0.75} {height} {tooltipData} />
       <Clip id="globe-shape" {width} {height} />
       <!-- Borders / Outline -->
       <path
