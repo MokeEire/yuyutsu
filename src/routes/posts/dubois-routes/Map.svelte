@@ -1,4 +1,8 @@
 <script>
+  import { tweened } from "svelte/motion";
+  import { quartInOut } from 'svelte/easing';
+
+
   import world from "$lib/data/110m.json";
   import * as topojson from "topojson-client";
   import rewind from "@turf/rewind";
@@ -21,19 +25,10 @@
   );
 
   import {
-    geoOrthographic,
     geoPath,
-    geoCentroid,
-    geoEqualEarth,
     geoEquirectangular,
-    geoMercator,
-    geoInterpolate,
   } from "d3-geo";
-  //import { geoBaker } from "d3-geo-projection";
-  import { scaleLinear } from "d3-scale";
-  import { max } from "d3-array";
-  import { timer } from "d3-timer";
-  import { draw } from "svelte/transition";
+  import { draw, fade, scale } from "svelte/transition";
 
   let width = 600;
   $: height = width / 2;
@@ -47,16 +42,13 @@
   // Path generator
   $: path = geoPath().projection(projection);
 
-  let georgiaCoords = [
-          -81.0753,
-          32.0967
-        ];
-
+  let georgiaCoords = [-81.0753, 32.0967];
 
   let tooltipData;
 
   import Globe from "./Globe.svelte";
   import Clip from "./Clip.svelte";
+
 </script>
 
 <div class="plate">
@@ -89,12 +81,6 @@
           d={path(country)}
           fill="transparent"
           stroke="none"
-          on:click={() => {
-            tooltipData = country;
-          }}
-          on:focus={() => {
-            tooltipData = country;
-          }}
           tabIndex="0"
           clip-path="url(#globe-shape)"
         />
@@ -130,7 +116,7 @@
             type: "Feature",
             geometry: {
                 type: "LineString",
-            coordinates: route.coords
+              coordinates: route.coords,
             },
           })}
         />
@@ -153,12 +139,12 @@
       >
       <!-- Selected country Borders -->
     </svg>
-    <div class='legend'>
-        <div class='legend-item'>
+    <div class="legend">
+      <div class="legend-item">
             <span>&#8803;</span>
             <span>Routes of the African slave trade.</span>
         </div>
-        <div class='legend-item'>
+      <div class="legend-item">
             <span>&#10026;</span>
             <span>The State of Georgia.</span>
         </div>
@@ -195,7 +181,7 @@
     text-transform: uppercase;
     text-align: center;
     font-family: "Public Sans", sans-serif;
-    opacity: .9;
+    opacity: 0.9;
   }
 
   .chart-title {
@@ -242,7 +228,7 @@
   .globes {
     max-width: 968px;
     margin: 5vh 0 3vh;
-    opacity: .85;
+    opacity: 0.85;
   }
 
   svg {
@@ -253,11 +239,11 @@
   .legend {
     display: flex;
     flex-direction: column;
-    row-gap: .5rem;
+    row-gap: 0.5rem;
     margin: 0 auto;
     width: 50%;
     text-align: left;
-    opacity: .75;
+    opacity: 0.75;
     font-size: 1.1rem;
   }
 
