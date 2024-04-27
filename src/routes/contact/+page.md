@@ -4,4 +4,4 @@ title: Contact
 description: We would like to hear from you. 
 ---
 
-A contact form maybe.
+Right now, the best place to contact me is probably [LinkedIn](https://www.linkedin.com/in/markkbarrett/).
