@@ -50,7 +50,7 @@
   import Clip from "./Clip.svelte";
 
 </script>
-
+ 
 <div class="plate">
   <div class="chart-title">
     <h1>The Georgia Negro.</h1>
@@ -60,7 +60,7 @@
   </div>
   <div class="chart-container" bind:clientWidth={width}>
     <svg class="globes" {width} {height}>
-      <!-- Globe -->
+        <!-- Globe -->
       <!-- svelte-ignore a11y-click-events-have-key-events --->
       <Globe cx={width * 0.25} {height} {tooltipData} />
       <Globe cx={width * 0.75} {height} {tooltipData} />
@@ -72,7 +72,7 @@
         stroke="black"
         clip-path="url(#globe-shape)"
       />
-      
+
       <!-- Countries -->
       {#each countries as country}
         <!-- svelte-ignore a11y-click-events-have-key-events --->
@@ -115,7 +115,7 @@
           d={path({
             type: "Feature",
             geometry: {
-                type: "LineString",
+              type: "LineString",
               coordinates: route.coords,
             },
           })}
@@ -131,7 +131,7 @@
       <text
           class="georgia-label"
         fill="black"
-    transform="translate({projection(georgiaCoords)})"
+        transform="translate({projection(georgiaCoords)})"
         dx="-5"
         dominant-baseline="middle"
         text-anchor="start"
@@ -141,13 +141,13 @@
     </svg>
     <div class="legend">
       <div class="legend-item">
-            <span>&#8803;</span>
-            <span>Routes of the African slave trade.</span>
-        </div>
+        <span>&#8803;</span>
+        <span>Routes of the African slave trade.</span>
+      </div>
       <div class="legend-item">
-            <span>&#10026;</span>
-            <span>The State of Georgia.</span>
-        </div>
+        <span>&#10026;</span>
+        <span>The State of Georgia.</span>
+      </div>
     </div>
 
     <div class="chart-desc">
@@ -196,6 +196,7 @@
   .chart-title h1 {
     color: black;
     font-family: "Public Sans", sans-serif;
+    font-size: 2rem;
   }
 
   .chart-title h1 {
@@ -241,7 +242,7 @@
     flex-direction: column;
     row-gap: 0.5rem;
     margin: 0 auto;
-    width: 50%;
+    width: fit-content;
     text-align: left;
     opacity: 0.75;
     font-size: 1.1rem;
@@ -252,9 +253,6 @@
   }
 
   .legend-item {
-    display: flex;
-    align-items: center;
-    column-gap: 8px;
   }
 
   .caption {
