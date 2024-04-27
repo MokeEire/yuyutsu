@@ -15,9 +15,9 @@ showHeader: false
   import Map from './Map.svelte'
 </script>
 
-<Map />
+**Please Note**: The language in this post is from, or referencing, scientific work from 1900. I thought it would be wrong to alter the wording because language is a powerful element of Du Bois' work, especially for readers in a modern context. However, I recognize race is a difficult subject for white people to navigate with appropriate awareness and compassion, so if you disagree with how this work is presented please reach out to me and let me know.
 
-**Please Note**: Racial terminology in this post is from, or referencing, scientific work from the late 1800s and early 1900s. It's not clear to me whether to change the language or preserve the context, so I chose the latter because I felt the language is one of the elements which makes Du Bois' work so powerful. Race is often a sensitive subject for people, so if you have thoughts or comments about how this work is presented please reach out to me.
+<Map />
 
 The [Du Bois Visualization Challenge](https://www.datavisualizationsociety.org/news/2024/2/2/advance-your-data-viz-skills-with-the-weekly-2024-du-bois-visualization-challenge) honours the social scientist and data visualization pioneer, W.E.B. Du Bois.
 Below is my (in progress) attempt to recreate the introductory visualization of _The Georgia Negro_ study, created by Du Bois for a scientific exhibit in Paris in 1900.
