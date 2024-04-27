@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Dubois Challenge 2024: Slave Trade Routes"
+title: "Dubois Challenge 2024: Plate 1"
 description: "Celebrating a pioneer of data visualization"
 categories:
   - dataviz
 date: 2024-04-23
 published: true
-image: https://images.unsplash.com/photo-1506818144585-74b29c980d4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80
-header: https://images.unsplash.com/photo-1506818144585-74b29c980d4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80
+image: /posts/routes.png
+header: /posts/routes.png
 showHeader: false
 ---
 
