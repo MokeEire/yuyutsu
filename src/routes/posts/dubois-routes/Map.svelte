@@ -196,7 +196,7 @@
   .chart-title h1 {
     color: black;
     font-family: "Public Sans", sans-serif;
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   .chart-title h1 {
