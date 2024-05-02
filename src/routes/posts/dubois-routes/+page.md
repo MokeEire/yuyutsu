@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Dubois Challenge 2024: Plate 1"
+title: "Du Bois Viz Challenge 2024: Plate 1"
 description: "Celebrating a pioneer of data visualization"
 categories:
   - dataviz
@@ -15,12 +15,11 @@ showHeader: false
   import Map from './Map.svelte'
 </script>
 
-**Please Note**: The language in this post is from, or referencing, scientific work from 1900. I thought it would be wrong to alter the wording because language is a powerful element of Du Bois' work, especially for readers in a modern context. However, I recognize race is a difficult subject for white people to navigate with appropriate awareness and compassion, so if you disagree with how this work is presented please reach out to me and let me know.
+**Please Note**: The language in this post is directly from W.E.B. Du Bois' scientific study in 1900. [Here](https://github.com/ajstarks/dubois-data-portraits/blob/master/challenge/2024/challenge04/original-plate-01.jpg) is the original piece. It felt wrong to alter the wording because the language is a powerful element of Du Bois' work, especially for readers in a modern context. However, race is a difficult subject for white people to navigate with appropriate awareness and compassion, so please reach out with any thoughts about the way this work is presented.
 
 <Map />
 
-The [Du Bois Visualization Challenge](https://www.datavisualizationsociety.org/news/2024/2/2/advance-your-data-viz-skills-with-the-weekly-2024-du-bois-visualization-challenge) honours the social scientist and data visualization pioneer, W.E.B. Du Bois.
-Below is my (in progress) attempt to recreate the introductory visualization of _The Georgia Negro_ study, created by Du Bois for a scientific exhibit in Paris in 1900.
+This is my effort to participate in the [Du Bois Visualization Challenge](https://www.datavisualizationsociety.org/news/2024/2/2/advance-your-data-viz-skills-with-the-weekly-2024-du-bois-visualization-challenge) - an annual challenge which honours the social scientist and data visualization pioneer, W.E.B. Du Bois.
 
 # Process
 
