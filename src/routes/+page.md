@@ -19,7 +19,7 @@ description: "A blog about making the world better and visualizing data."
     <img src="{mePic}" alt="Your Name" class="about-image">
     <h3>Welcome!</h3>
     <div class="about-text">
-      <p>My name is Mark. I am a researcher, analyst, and data viz enthusiast. I am analyze making a better world by improving the decision-making of institutions that have the power to tackle the issues that seem daunting from the scale of an individual.</p>
+      <p>My name is Mark. I am a researcher, analyst, and data viz enthusiast. I am interested in improving the decision-making of key institutions that focus on global problems like AI policy and climate change. In particular, I believe insights from behavioural science can play a valuable role in identifying and improving decision-making processes and institutional structures.</p>
     </div>
     <div class="about-links">
         {#each links as { title, url, target, icon }}
