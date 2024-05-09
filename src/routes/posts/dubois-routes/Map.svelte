@@ -32,8 +32,8 @@
 
   // Projection function
   $: projection = geoEquirectangular()
-    .scale(height * 0.3) // geoEquirectangular
-    .rotate([30, 0, 0]) // geoEquirectangular
+    .scale(height * 0.325) // geoEquirectangular
+    .rotate([30, -2.5, 0]) // geoEquirectangular
     .translate([width / 2, height / 2]); // Where the projection is centered
 
   // Path generator
