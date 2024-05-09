@@ -189,6 +189,6 @@
   }
 
   .country {
-    fill: #d7b0177a;
+    fill: #ffd70070;
   }
 </style>

@@ -24,6 +24,6 @@
 
 <style>
     .globe {
-        fill: #6c96bb21;
+        fill: #4682b421;
     }
 </style>
