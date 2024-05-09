@@ -46,23 +46,23 @@
   import Globe from "./Globe.svelte";
   import Clip from "./Clip.svelte";
 </script>
- 
-  <div class="chart-container" bind:clientWidth={width}>
-    <svg class="globes" {width} {height}>
-        <!-- Globe -->
-      <!-- svelte-ignore a11y-click-events-have-key-events --->
-      <Globe cx={width * 0.25} {height} {tooltipData} />
-      <Globe cx={width * 0.75} {height} {tooltipData} />
+
+<div class="chart-container" bind:clientWidth={width}>
+  <svg class="globes" {width} {height}>
+    <!-- Globe -->
+    <!-- svelte-ignore a11y-click-events-have-key-events --->
+    <Globe cx={width * 0.25} {height} {tooltipData} />
+    <Globe cx={width * 0.75} {height} {tooltipData} />
     {#if clip}
       <Clip id="globe-shape" {width} {height} />
     {/if}
-      <!-- Borders / Outline -->
-      <path
-        d={path(outline)}
-        fill="none"
-        stroke="black"
+    <!-- Borders / Outline -->
+    <path
+      d={path(outline)}
+      fill="none"
+      stroke="black"
       clip-path={clip ? "url(#globe-shape)" : ""}
-      />
+    />
     <path
       d="M {width * 0.25}, 0 A {width * 0.25} {height * 0.5} 0 0 1 {width *
         0.5}, {height * 0.5}"
@@ -101,72 +101,72 @@
         the Negro Race
       </textPath>
     </text>
-      <!-- Countries -->
-      {#each countries as country}
-        <!-- svelte-ignore a11y-click-events-have-key-events --->
-        <path
-          class="country"
-          d={path(country)}
-          fill="transparent"
-          stroke="none"
-          tabIndex="0"
+    <!-- Countries -->
+    {#each countries as country}
+      <!-- svelte-ignore a11y-click-events-have-key-events --->
+      <path
+        class="country"
+        d={path(country)}
+        fill="transparent"
+        stroke="none"
+        tabIndex="0"
         clip-path={clip ? "url(#globe-shape)" : ""}
-        />
-      {/each}
+      />
+    {/each}
 
-      {#each featuresRewind as shape}
-        {#if shape.properties.type === "source"}
-          <path
-            d={path(shape)}
-            fill={shape.properties.fill}
-            stroke="none"
-            opacity={shape.properties.opacity}
-            tabIndex="0"
-          />
-        {:else if shape.properties.type === "destination"}
-          <path
-            in:fade={{ delay: 1000, duration: 5000, easing: quartInOut }}
-            d={path(shape)}
-            fill={shape.properties.fill}
-            stroke="none"
-            opacity={shape.properties.opacity}
-            tabIndex="0"
-          />
-        {/if}
-      {/each}
-      <!-- Routes -->
-      {#each routes as route, i}
+    {#each featuresRewind as shape}
+      {#if shape.properties.type === "source"}
         <path
-          in:draw={{ delay: 600 + 150 * i, duration: 1800 }}
-          fill="none"
-          stroke="black"
-          d={path({
-            type: "Feature",
-            geometry: {
-              type: "LineString",
-              coordinates: route.coords,
-            },
-          })}
+          d={path(shape)}
+          fill={shape.properties.fill}
+          stroke="none"
+          opacity={shape.properties.opacity}
+          tabIndex="0"
         />
-      {/each}
-      <!-- Georgia point -->
-      <circle
-        cx={projection(georgiaCoords)[0]}
-        cy={projection(georgiaCoords)[1]}
-        r="4.5"
-        fill="#fff"
+      {:else if shape.properties.type === "destination"}
+        <path
+          in:fade={{ delay: 1000, duration: 5000, easing: quartInOut }}
+          d={path(shape)}
+          fill={shape.properties.fill}
+          stroke="none"
+          opacity={shape.properties.opacity}
+          tabIndex="0"
         />
-      <text
-          class="georgia-label"
-        fill="black"
-        transform="translate({projection(georgiaCoords)})"
-        dx="-5"
-        dominant-baseline="middle"
-        text-anchor="start"
-        dy="1">&#10026;</text
-      >
-      <!-- Selected country Borders -->
-    </svg>
+      {/if}
+    {/each}
+    <!-- Routes -->
+    {#each routes as route, i}
+      <path
+        in:draw={{ delay: 600 + 150 * i, duration: 1800 }}
+        fill="none"
+        stroke="black"
+        d={path({
+          type: "Feature",
+          geometry: {
+            type: "LineString",
+            coordinates: route.coords,
+          },
+        })}
+      />
+    {/each}
+    <!-- Georgia point -->
+    <circle
+      cx={projection(georgiaCoords)[0]}
+      cy={projection(georgiaCoords)[1]}
+      r="4.5"
+      fill="#fff"
+    />
+    <text
+      class="georgia-label"
+      fill="black"
+      transform="translate({projection(georgiaCoords)})"
+      dx="-5"
+      dominant-baseline="middle"
+      text-anchor="start"
+      dy="1">&#10026;</text
+    >
+    <!-- Selected country Borders -->
+  </svg>
 </div>
 
 <style>
