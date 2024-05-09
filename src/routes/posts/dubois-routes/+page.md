@@ -56,6 +56,7 @@ This is part of the [Du Bois Visualization Challenge](https://www.datavisualizat
 
 I started out using code from Connor Rothschild's lesson [Create an Interactive Globe Visualization With Svelte + D3.js](https://www.newline.co/courses/better-data-visualizations-with-svelte/what-we-ll-be-building-globe).
 This included using an SVG circle as the background of the globe and using the [`d3-geo`](https://github.com/d3/d3-geo) and [TopoJSON](https://github.com/topojson) libraries to render countries' borders and shapes.
+The development process went something along the lines of:
 
 1. Create the twin globes
 2. Prepare the data
