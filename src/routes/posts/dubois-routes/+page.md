@@ -17,9 +17,40 @@ showHeader: false
 
 **Please Note**: The language in this post is directly from W.E.B. Du Bois' scientific study in 1900. [Here](https://github.com/ajstarks/dubois-data-portraits/blob/master/challenge/2024/challenge04/original-plate-01.jpg) is the original piece. It felt wrong to alter the wording because the language is a powerful element of Du Bois' work, especially for readers in a modern context. However, race is a difficult subject for white people to navigate with appropriate awareness and compassion, so please reach out with any thoughts about the way this work is presented.
 
-<Map />
+<div class="plate">
+  <div class="chart-title">
+    <h1>The Georgia Negro.</h1>
+    <span>A Social Study</span>
+    <span>By</span>
+    <span>W.E. Burghardt Du Bois</span>
+  </div>
+  <Map />
+<div class="legend">
+      <div class="legend-item">
+        <span>&#8803;</span>
+        <span>Routes of the African slave trade.</span>
+      </div>
+      <div class="legend-item">
+        <span>&#10026;</span>
+        <span>The State of Georgia.</span>
+      </div>
+    </div>
+    <div class="chart-desc">
+      <p>
+        This case is devoted to a series of charts, maps and other devi–ces
+        designed to illustrate the development of the American Negro in a single
+        typical state of the United States.
+      </p>
+      <p>"The problem of the 20th century is the problem of the color-line."</p>
+    </div>
+    <p class="caption">
+      Source: <a href="https://www.slavevoyages.org/voyage/database"
+        >Trans-Atlantic Slave Trade Database</a
+      >
+    </p>
+    </div>
 
-This is my effort to participate in the [Du Bois Visualization Challenge](https://www.datavisualizationsociety.org/news/2024/2/2/advance-your-data-viz-skills-with-the-weekly-2024-du-bois-visualization-challenge) - an annual challenge which honours the social scientist and data visualization pioneer, W.E.B. Du Bois.
+This is part of the [Du Bois Visualization Challenge](https://www.datavisualizationsociety.org/news/2024/2/2/advance-your-data-viz-skills-with-the-weekly-2024-du-bois-visualization-challenge) - an annual challenge which honours the social scientist and data visualization pioneer, W.E.B. Du Bois.
 
 # Process
 
