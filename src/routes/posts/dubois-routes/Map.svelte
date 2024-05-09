@@ -54,13 +54,15 @@
       <!-- svelte-ignore a11y-click-events-have-key-events --->
       <Globe cx={width * 0.25} {height} {tooltipData} />
       <Globe cx={width * 0.75} {height} {tooltipData} />
+    {#if clip}
       <Clip id="globe-shape" {width} {height} />
+    {/if}
       <!-- Borders / Outline -->
       <path
         d={path(outline)}
         fill="none"
         stroke="black"
-        clip-path="url(#globe-shape)"
+      clip-path={clip ? "url(#globe-shape)" : ""}
       />
 
       <!-- Countries -->
@@ -72,7 +74,7 @@
           fill="transparent"
           stroke="none"
           tabIndex="0"
-          clip-path="url(#globe-shape)"
+        clip-path={clip ? "url(#globe-shape)" : ""}
         />
       {/each}
 
