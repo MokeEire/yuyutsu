@@ -15,7 +15,13 @@ showHeader: false
   import Map from './Map.svelte'
 </script>
 
-**Please Note**: The language in this post is directly from W.E.B. Du Bois' scientific study in 1900. [Here](https://github.com/ajstarks/dubois-data-portraits/blob/master/challenge/2024/challenge04/original-plate-01.jpg) is the original piece. It felt wrong to alter the wording because the language is a powerful element of Du Bois' work, especially for readers in a modern context. However, race is a difficult subject for white people to navigate with appropriate awareness and compassion, so please reach out with any thoughts about the way this work is presented.
+<blockquote>
+  <strong>Please Note</strong>: The language used in this piece comes directly from W.E.B. Du Bois' scientific study in 1900. 
+  You can view the original piece <a href="https://github.com/ajstarks/dubois-data-portraits/blob/master/challenge/2024/challenge04/original-plate-01.jpg">here</a>. 
+  I am torn about reproducing language that could be painful for people to read, but I thought altering the wording would be a disservice to the work. 
+  I find the language of Du Bois' work to be a powerful reminder, especially for readers in a modern context, that racial inequality has a long tenure in our societies and institutions. 
+  However, race is a difficult subject for white people like myself to navigate with appropriate awareness and compassion, so <a href="../contact">please reach out</a> with any thoughts or feedback on this work.
+</blockquote>
 
 <div class="plate">
   <div class="chart-title">
@@ -140,6 +146,15 @@ This transition, in combination with the animated routes, are meant to emphasize
 - https://www.cambridge.org/core/journals/international-review-of-social-history/article/expansion-of-slavery-in-benguela-during-the-nineteenth-century/4A502CB651CEA5CB1249605978352A87
 
 <style>
+  blockquote {
+      font-size: 0.9rem;
+  border-left: 12px solid var(--brand-color);
+  border-radius: 2px;
+  margin: 1rem 0 1rem;
+  background-color: var(--body-font);
+  padding: 8px 0 8px 16px;
+  }
+
   .plate {
     margin-bottom: 10vh;
     background: #e3cfbc;
