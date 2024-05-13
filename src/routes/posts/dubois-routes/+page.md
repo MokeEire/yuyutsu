@@ -157,7 +157,7 @@ This transition, in combination with the animated routes, are meant to emphasize
 
   .plate {
     margin-bottom: 10vh;
-    background: #e3cfbc;
+    background: #d2b48c;
     padding: 4px 16px;
     border-radius: 6px;
     text-transform: uppercase;
