@@ -57,6 +57,9 @@ showHeader: false
     </div>
 
 This is part of the [Du Bois Visualization Challenge](https://www.datavisualizationsociety.org/news/2024/2/2/advance-your-data-viz-skills-with-the-weekly-2024-du-bois-visualization-challenge) - an annual challenge which honours the social scientist and data visualization pioneer, W.E.B. Du Bois.
+The full details of this year's challenge can be found [on GitHub](https://github.com/ajstarks/dubois-data-portraits/blob/master/challenge/2024/README.md).
+I learned about W.E.B. Du Bois when these challenges started a few years ago and then I happened upon a book about his work in a museum in Washington D.C. - Visualizing Black America.
+This challenge was an excellent opportunity to practice my skills with Svelte and D3, while celebrating the work of a data visualization pioneer.
 
 # Process
 
@@ -81,15 +84,14 @@ For example, here is the map without clipping:
 
 <Map clip={false} />
 
-
 ## Prepare the data
 
 The data for this challenge is provided in the [GitHub repo](https://github.com/ajstarks/dubois-data-portraits/tree/master/challenge/2024/challenge04) in the `routes` and `route-pairs` CSV files.
 To recreate Du Bois' map, we don't actually need either dataset.
 In fact, neither dataset is even helpful for recreating Du Bois' work (though they have inspired a future extension of this work).
 We need the coordinates of the 5 slave trade routes and the polygons to depict the destinations of these African slaves to the western hemisphere.
-This did in fact require the manual (gasp!) effort to draw these custom paths and polygons and export them into JSON format. 
-I cross-referenced the locations in Du Bois' visualization with the [map](https://www.slavevoyages.org/voyage/database#maps) from the Trans Atlantic Slave Trade Database used [geojson.io](https://geojson.io) to select the coordinates of the sources and destinations of each route.
+This did require manual (gasp!) effort to draw custom paths and polygons and export them into JSON format.
+I used [geojson.io](https://geojson.io) to select the coordinates of the sources and destinations of each route and cross-referenced the locations in Du Bois' visualization with the [map](https://www.slavevoyages.org/voyage/database#maps) from the Trans Atlantic Slave Trade Database.
 
 In the future, I am hoping to extend this visual to incorporate the more granular data of individual slave trade routes.
 
@@ -126,14 +128,16 @@ The routes look something like this:
 ```
 
 Using Svelte, I created an SVG `<path>` element for each route, and used the [`draw`](https://svelte.dev/docs/svelte-transition#draw) transition to animate the routes from their source to their destination.
+I still need to learn to curve the paths into arcs when using coordinates.
 
 ## Draw the regions
 
+Next I needed to draw the different regions on the plot - the dark areas for the locations African slaves were primarily transported from and to, and the lighter areas to indicate the wide reach of both the capturing and migration that occurred.
 I ran into an interesting problem when drawing the regions - [the points of polygon geometries need to be arranged in anti-clockwise order](https://imfeld.dev/writing/introduction_to_geojson).
 Unfortunately I had not adhered to this rule when creating the polygons and I didn't really want to go back and re-do all that work.
 Thankfully, there is a library that will rearrange the points to be in the order you need: [`turf.js`](https://turfjs.org/docs/#rewind) (also see [this StackOverflow post](https://stackoverflow.com/questions/49311001/d3-js-drawing-geojson-incorrectly)).
 With this problem solved, I drew the regions and used Svelte's [`fade`](https://svelte.dev/docs/svelte-transition#fade) transition on the destination shapes.
-This transition, in combination with the animated routes, are meant to emphasize Du Bois' static representation  of the migration of slaves beyond their initial landing point.
+This transition, in combination with the animated routes, are meant to emphasize Du Bois' static representation of the migration of slaves beyond their initial landing point.
 
 # References
 
