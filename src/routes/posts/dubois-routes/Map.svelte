@@ -44,6 +44,7 @@
 
   import Globe from "./Globe.svelte";
   import Clip from "./Clip.svelte";
+  import GlobeText from "./GlobeText.svelte";
 </script>
 
 <div class="chart-container" bind:clientWidth={width}>
