@@ -10,8 +10,7 @@
   export let clip = true;
 
   let countries = topojson.feature(world, world.objects.countries).features;
-  let featuresRewind = rewind(mapShapes, { reverse: true }).features;
-  console.log(featuresRewind);
+  let featuresRewind = rewind(mapShapes, { reverse: true }).features.sort((a, b) => a.properties.type - b.properties.type || a.properties.opacity - b.properties.opacity);
   let borders = topojson.mesh(
     world,
     world.objects.countries,
