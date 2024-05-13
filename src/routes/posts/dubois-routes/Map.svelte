@@ -87,7 +87,11 @@
         />
       {:else if shape.properties.type === "destination"}
         <path
-          in:fade={{ delay: 1000, duration: 5000, easing: quartInOut }}
+          in:fade={{
+            delay: shape.properties.order * 250,
+            duration: 4500,
+            easing: quartInOut,
+          }}
           d={path(shape)}
           fill={shape.properties.fill}
           stroke="none"
@@ -99,7 +103,7 @@
     <!-- Routes -->
     {#each routes as route, i}
       <path
-        in:draw={{ delay: 600 + 150 * i, duration: 1800 }}
+        in:draw={{ delay: 600 + 200 * i, duration: 2000 }}
         fill="none"
         stroke="black"
         d={path({
