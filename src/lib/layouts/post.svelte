@@ -4,6 +4,7 @@
   import CiteArticle from "$lib/components/Citations/CiteArticle.svelte";
   import Categories from "$lib/components/Categories.svelte";
   import { siteTitle } from "$lib/constants";
+  import {format} from "date-fns";
 
   export let data;
   export let title, description, date, categories, image, header, showHeader = true;
@@ -17,23 +18,25 @@
   $: recentPosts = data.posts;
 
   $: actualDate = new Date(date);
+
 </script>
 
 <Seo {...seo} />
 
 <div class="post-header">
+  <Categories {categories} />
   <h1>{title}</h1>
   {#if description}
     <caption class="post-desc">{description}</caption>
     {/if}
-  {#if date}
-  <p class="date">{actualDate.toLocaleDateString()}</p>
-  {/if}
-  <Categories {categories} />
+    {#if date}
+    <p class="date">{format(actualDate, "d MMM yyyy")}</p>
+    {/if}
   {#if showHeader}
   <img class="post-img" width="100%" height="300" src={header} alt={title} />
   {/if}
 </div>
+<hr>
 
 <slot />
 
