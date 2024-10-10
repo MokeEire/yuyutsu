@@ -22,6 +22,7 @@
     "@turf/rewind": "^6.5.0",
     "bibtex-js-parser": "^1.1.6",
     "d3": "^7.8.5",
+    "date-fns": "^3.6.0",
     "pnpm": "^8.6.12",
     "topojson-client": "^3.1.0"
   }
