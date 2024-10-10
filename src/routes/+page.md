@@ -19,7 +19,8 @@ description: "A blog about making the world better and visualizing data."
     <img src="{mePic}" alt="Your Name" class="about-image">
     <h3>Welcome!</h3>
     <div class="about-text">
-      <p>My name is Mark. I am a researcher, analyst, and data viz enthusiast. I am interested in improving the decision-making of key institutions that focus on global problems like AI policy and climate change. In particular, I believe insights from behavioural science can play a valuable role in identifying and improving decision-making processes and institutional structures.</p>
+      <p>My name is Mark. I am an analyst, policy researcher, and data visualization designer.</p>
+      <p>I am interested in improving effective governance and the decision-making of key institutions that impact problems like climate change, AI policy, and housing.</p>
     </div>
     <div class="about-links">
         {#each links as { title, url, target, icon }}
