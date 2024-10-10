@@ -24,7 +24,6 @@
 <style>
   .wrapper {
     display: flex;
-    contain: paint
   }
   main {
     width: 100%;
