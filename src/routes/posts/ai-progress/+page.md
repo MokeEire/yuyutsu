@@ -63,8 +63,7 @@ Some examples of such catalyzing events that have garnered media attention over 
 
 - Robots using AI language models told the UN that AI could do a better job governing than humans
 
-I expect that governments around the world will institute some meaningful laws to enforce safe practices in AI development in the next few years.
-I am less confident in this belief because I know that I want it to be true.
+I expect governments around the world will institute some meaningful laws to enforce safe practices in AI development in the next few years, but I hope we do not have to wait for a catastrophe to react.
 
 ## References
 
