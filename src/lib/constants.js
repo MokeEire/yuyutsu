@@ -4,21 +4,20 @@ export const menu = [
     url: "/",
   },
   {
+    title: "Blog",
+    url: "/posts",
+  },
+  {
+    title: "Resources",
+    url: "/resources",
+  },
+  {
     title: "About",
     url: "/about",
   },
   {
-    title: "Categories",
-    url: "/categories",
-  },
-  {
     title: "Contact",
     url: "/contact",
-  },
-  {
-    title: "Github",
-    url: "https://github.com/MokeEire/",
-    target: "_blank",
   },
 ];
 
