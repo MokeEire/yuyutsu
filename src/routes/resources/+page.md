@@ -20,6 +20,7 @@ Here's a list of resources that I have found useful related to programming (larg
 - [Advanced R](https://adv-r.hadley.nz/): Helpful for understanding how R works which will help you improve your programming skills with it
 - [Mastering Shiny](https://mastering-shiny.org/): Learn to develop web applications using R
 - [R Packages](https://r-pkgs.org/): Learn how to create R packages
+- [Geocomputation with R](https://r.geocompx.org/): My go-to reference for anything geospatial
 
 ## Statistics/Machine Learning
 
