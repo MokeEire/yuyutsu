@@ -31,21 +31,29 @@
     transition: all 300ms ease;
   }
   .post-item {
-    margin-bottom: 3rem;
+    margin: .5rem;
     width: 30%;
     min-width: 300px;
     padding: 16px;
     display: flex;
     flex-direction: column;
-    justify-items: space-between;
+    justify-content: space-between;
+    transition: all 400ms ease; 
+    border-radius: 8px;
   }
-  
+  .post-item:hover {
+    background-color: var(--bg-light);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
   .post-link {
     text-decoration: none;
+    margin-bottom: 16px;
   }
   .title {
     line-height: normal;
     transition: all 300ms ease;
+    margin-bottom: 0;
   }
 
   h2 {
