@@ -95,10 +95,11 @@ description: "A blog about making the world better and visualizing data."
 .link-item {
     flex-basis: calc(25% - 10px); /* Adjust the percentage for more or fewer items */
     text-align: center;
-    margin-bottom: 16px;
+    margin-top: 8px;
     opacity: .7;
     filter: grayscale(1);
-    transition: filter 320ms ease, transform 800ms ease; 
+    transition: filter 200ms ease, transform 400ms ease; 
+    line-height: 1;
 }
 
 .link-item a {
@@ -106,8 +107,6 @@ description: "A blog about making the world better and visualizing data."
     display: flex;
     flex-flow: column;
     align-items: center;
-    font-family: var(--header-font);
-    font-size: 16px;
 }
 
 .link-item span {
