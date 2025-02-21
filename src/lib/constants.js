@@ -8,12 +8,12 @@ export const menu = [
     url: "/posts",
   },
   {
-    title: "Resources",
-    url: "/resources",
-  },
-  {
     title: "About",
     url: "/about",
+  },
+  {
+    title: "Resources",
+    url: "/resources",
   },
   {
     title: "Contact",
