@@ -7,7 +7,7 @@ description: A list of resources that have helped me
 <script>
 </script>
 
-Here's a list of resources that I have found useful related to programming (largely related to data analysis, machine learning, and data visualization), and understanding policy.
+Here's a compilation of resources that I have found useful for learning programming (largely related to data analysis, machine learning, and data visualization), and understanding policy.
 
 # Programming
 
@@ -22,6 +22,14 @@ Here's a list of resources that I have found useful related to programming (larg
 - [R Packages](https://r-pkgs.org/): Learn how to create R packages
 - [Geocomputation with R](https://r.geocompx.org/): My go-to reference for anything geospatial
 
+## Python
+
+- [Coding for Economists](https://aeturrell.github.io/coding-for-economists/intro.html)
+
+## SQL
+
+- [The SQL Tutorial for Data Analysis](https://mode.com/sql-tutorial/introduction-to-sql)
+
 ## Statistics/Machine Learning
 
 Statistics and Machine Learning could be its own section, but because a lot of the resources focus on programming too, I'm including it within programming.
@@ -29,6 +37,10 @@ Statistics and Machine Learning could be its own section, but because a lot of t
 - [An Introduction to Statistical Learning](https://www.statlearning.com/)
 - [Introduction to Econometrics with R](https://www.econometrics-with-r.org/index.html)
 - [Causal Inference The Mixtape](https://mixtape.scunning.com/)
+
+## General Programming
+
+- [git - the simple guide](https://rogerdudler.github.io/git-guide/)
 
 # Data Visualization
 
