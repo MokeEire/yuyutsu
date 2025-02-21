@@ -3,7 +3,7 @@
 
   export let items = [];
   export let currentPage = 1;
-  export let itemsPerPage = 3;
+  export let itemsPerPage = 4;
 
   let numberOfPages = Math.ceil(items.length / itemsPerPage);
 
@@ -13,7 +13,7 @@
   
   $: $paginatedPosts = paginate(items, itemsPerPage, currentPage);
 </script>
-
+{#if numberOfPages > 1}
 <nav>
   <ul>
     {#each Array(numberOfPages) as _, index}
@@ -26,6 +26,7 @@
     {/each}
   </ul>
 </nav>
+{/if}
 
 <style>
   ul {
