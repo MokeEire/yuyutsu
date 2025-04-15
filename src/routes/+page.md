@@ -20,7 +20,7 @@ description: "A blog about making the world better and visualizing data."
     <h3>Welcome!</h3>
     <div class="about-text">
       <p>My name is Mark. I am an analyst, policy researcher, and data visualization designer.</p>
-      <p>I am interested in improving effective governance and the decision-making of key institutions that impact problems like climate change, AI policy, and housing.</p>
+      <p>I focus on improving decision-making and governance in institutions. I am particularly interested in doing this at key institutions that impact problems like inequality, climate change, and AI policy.</p>
     </div>
     <div class="about-links">
         {#each links as { title, url, target, icon }}
