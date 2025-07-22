@@ -20,7 +20,7 @@ In summary: we will see some revolutionary advancements in AI over the next 3-5 
 
 ### Better algorithms
 
-Algorithms have improved significantly since the success of deep learning in the 2010s, with advances in neural network architectures performance and flexibility of machine learning models across tasks in vision, strategy, and language.
+Algorithms have improved significantly since the success of deep learning in the 2010s, with advances in neural network architecture performance and flexibility of machine learning models across tasks in vision, strategy, and language.
 While progress is often attributed to the increased availability of computation and data, researchers found that [improvements in algorithms were at least as important as increased compute availability](https://epochai.org/blog/revisiting-algorithmic-progress) in domains like computer vision. 
 Most improvements in algorithms were "compute-augmenting algorithmic advances" focused on getting better performance from less computational power.
 Going forward, improving the "explainability" of the underlying algorithms will be vital for AI progress. 
@@ -33,14 +33,14 @@ Increasing the computing power of the machines that run AI models has been a cru
 One reason compute has been so important to AI progress is due to its scalability: increasing computing power is often much easier than improving a complex algorithm.
 [The graph of the Top 500 supercomputers](https://www.top500.org/statistics/perfdevel/) suggests top computers might be due for a significant advance in the near future, though computers towards the bottom of the list (which are still very powerful) are improving much more slowly.
 The supercomputer currently ranked #500 is about as powerful as the top supercomputer in 2010.
-This trend could concentrate the priority-setting of AI research in the hands (or keyboards) of a select few supercomputer owners.
+This trend could concentrate control over AI research priorities among a select few supercomputer owners.
 
 ### More data
 
 It seems reasonable to assume available data will continue to increase but it is less clear whether the newly available data is also increasingly _useful_, or at least as useful as past data.
 In systems where we are refining data collection and management, the utility of data is likely to improve.
 Fields which rely on web-scraped data from the internet may experience a deluge of new content as a result of generative AI use, but this data may not be as valuable.
-It may also amplify existing biases in the model by using the model's own output as input data.
+It may also amplify existing biases in models by using AI-generated output as input data.
 
 ## What might slow AI down?
 
