@@ -11,7 +11,7 @@ image: https://media.tenor.com/M4njES4jiw4AAAAC/leon-airplane-the-movie.gif
 header: https://images.unsplash.com/photo-1506818144585-74b29c980d4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80
 ---
 
-The history of artificial intelligence is littered with experts' forecasting AI developments which have seemed to completely underestimate either the speed of technological progress or the difficulty of the problem.
+The history of artificial intelligence is littered with expert forecasts which have underestimated either the speed of technological progress or the difficulty of the problem.
 As part of week 1 of BlueDot's AI Safety course, I studied the development of AI over the past decade and offered a forecast of AI progress in the near future.
 
 In summary: we will see some revolutionary advancements in AI over the next 3-5 years but we will only see incremental progress in the next year or two.
@@ -29,7 +29,7 @@ This will be important for AI progress in part because legislators have already 
 
 ### More compute
 
-Increasing the computing power of the machines that run AI models has been a crucial driver of progress alongside algorithmic improvements throughout the deep learning revolution. 
+Increasing computational power has been a crucial driver of AI progress alongside algorithmic improvements throughout the deep learning revolution. 
 One reason compute has been so important to AI progress is due to its scalability: increasing computing power is often much easier than improving a complex algorithm.
 [The graph of the Top 500 supercomputers](https://www.top500.org/statistics/perfdevel/) suggests top computers might be due for a significant advance in the near future, though computers towards the bottom of the list (which are still very powerful) are improving much more slowly.
 The supercomputer currently ranked #500 is about as powerful as the top supercomputer in 2010.
@@ -37,7 +37,7 @@ This could concentrate the priority-setting of AI research in the hands (or keyb
 
 ### More data
 
-It seems reasonable to assume available data will continue to increase but it is less clear is whether the newly available data is also increasingly _useful_, or at least as useful as past data.
+While the amount of data is consistently growing, it is less clear whether newly available data is also increasingly _useful_, compared to past data.
 In systems where we are refining data collection and management, the utility of data is likely to improve.
 Fields which rely on web-scraped data from the internet may experience a deluge of new content as a result of generative AI use, but this data may not be as valuable.
 It may also amplify existing biases in the model by using the model's own output as input data.
@@ -57,7 +57,7 @@ Another potential stick in the spokes of accelerating AI capabilities is the pot
 Based on their relative proactivity in the realm of data privacy, it seems more likely that the European Union will lead the efforts to enforce safety practices in AI development than the US.
 US Senate majority [Chuck Schumer has also indicated interest in developing legislation around AI](https://www.csis.org/analysis/sen-chuck-schumer-launches-safe-innovation-ai-age-csis), but the framework appears to prioritize market innovation over the risks to society.
 The levers that determine safety and progress in AI development are still ambiguous to legislators, which is a hurdle for drafting effective legislation.
-It seems possible that politicians will not act before a catalyzing event provides a clearer example of what to regulate.
+Politicians may not act until a catalyzing event provides a clearer example of what needs regulation.
 Some examples of such catalyzing events that have garnered media attention over the past few years:
 
 - [Google employee claimed that their AI chatbot system was sentient](https://www.theguardian.com/technology/2022/jun/12/google-engineer-ai-bot-sentient-blake-lemoine)
