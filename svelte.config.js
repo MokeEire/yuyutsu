@@ -1,4 +1,5 @@
 import { mdsvex } from "mdsvex";
+import { ADAPTER } from "$env/static/private";
 import mdsvexConfig from "./mdsvex.config.js";
 import preprocess from "svelte-preprocess";
 import vercel from "@sveltejs/adapter-vercel";
@@ -11,7 +12,7 @@ const config = {
   extensions: [".svelte", ...mdsvexConfig.extensions],
 
   kit: {
-    adapter: PROCESS.ENV.ADAPTER === 'vercel'
+    adapter: ADAPTER === 'vercel'
       ? vercel()
       : netlify(),
     // Enable below line and change /yuyutsu to /<your-repo-name> to host the site on github pages
