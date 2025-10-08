@@ -13,7 +13,6 @@ const config = {
 
   kit: {
     adapter: ADAPTER === 'vercel'
-    adapter: ADAPTER === 'vercel'
       ? vercel()
       : netlify(),
     // Enable below line and change /yuyutsu to /<your-repo-name> to host the site on github pages
