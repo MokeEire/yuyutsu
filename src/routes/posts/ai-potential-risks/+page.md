@@ -5,37 +5,56 @@ description: "An overview of the ongoing harms, risks, and doomsday placards."
 categories:
   - AI Policy
 date: 2023-08-16
+updated: 2024-07-18
 published: true
 image: https://images.unsplash.com/photo-1529027288157-572df421f425?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80
 header: https://images.unsplash.com/photo-1529027288157-572df421f425?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80
 ---
 
-Artificial intelligence (AI) is an exciting and scary technology.
-It has already been used to push forward our knowledge of biology, 
-As artificial intelligence develops, [scientists are loudly warning the public of the potentially catastrophic risks](https://arxiv.org/abs/2306.12001) from misuse of the technology, accidents in system development and deployment, and possibly even rogue AI systems themselves. 
+As artificial intelligence develops, we need to be prepared for the risks as well as the rewards. 
+The risks, as with many technologies, include misuse and accidental harm from human actions. 
+These risks are more than enough to endanger our existence but AI also has potential to become more powerful than us. 
+Although [scientists are loudly warning the public of the potentially catastrophic risks of AI](https://arxiv.org/abs/2306.12001), we also need to consider the many smaller, more likely scenarios which could leave humanity worse off, particularly if they occur together. 
 To explore the likelihood and danger of each risk, let’s first define some terms. 
-**Misuse** is knowingly harmful (human) behaviour that leverages AI to achieve malicious aims, while **accidents** are unanticipated or unknowingly harmful actions that occur in development or deployment of AI systems. 
-Risks from **rogue, agentic AI systems** could be considered *accidents* in a situation where AI developers lose control of a system and the system "goes rogue", or *misuse* in a situation where cybercriminals intentionally unleash such an AI on the world. 
-Distinguishing rogue systems may be valuable insofar as it describes risks that may lie further outside human control than either of the other categories.
+
+In this post I want to answer a few questions:
+
+1. What are the risks of AI in its current state?
+2. What are the risks of AI if it becomes much more intelligent?
+
+To explore the likelihood and danger of each risk, I use the framework provided by BlueDot Impact, which is loosely based on the [Overview of Catastrophic AI Risks](https://www.safe.ai/ai-risk) published by the Center for AI Safety:
+
+<aside>
+💡 **Do you think risks arising from misuse, accidents, or rogue, agentic AI systems, are more likely to cause harm?**
+
+Does this answer change when limiting your time horizon to 5 years, 15 years and 30 years?
+
+</aside>
+
 
 ## Misuse
 
-Misuse of AI has already materialized from advances like generative AI and computer vision. 
-Generative AI reduced the cost of conducting disinformation campaigns and enhanced the targeting with the capability to tailor content to individuals, given the right data. 
-Computer vision and facial recognition enable authoritarian governments to conduct more effective population surveillance. 
+Misuse is intentional (human) behaviour that leverages AI to cause harm. 
+We already see misuse of AI with tools like computer vision and generative AI.
+Computer vision and facial recognition enable authoritarian governments to conduct more effective population surveillance.
 China has used facial recognition technologies (FRT) [to profile and track Uyghurs](https://www.nytimes.com/2019/04/14/technology/china-surveillance-artificial-intelligence-racial-profiling.html), an ethnic muslim minority group, while Russia used FRT [to identify and arrest anti-government protesters, in some cases as a preventative measure](https://www.reuters.com/investigates/special-report/ukraine-crisis-russia-detentions/), shortly after Russia's invasion of Ukraine. 
 
 But misuse is not limited to powerful authoritarian governments. 
 Cybercriminals are leveraging generative AI and machine learning techniques to [better guess passwords, tailor content for social engineering attacks, and autonomously improve performance of cyberattacks](https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/exploiting-ai-how-cybercriminals-misuse-abuse-ai-and-ml).
+Generative AI reduced the cost of conducting disinformation campaigns and enhanced the targeting with the capability to tailor content to individuals, given the right data. 
 Advances in biotechnology suggest that [tools and techniques required for engineering pandemic-level biological weapons will be accessible to non-experts in the next decade](https://www.gcsp.ch/publications/delay-detect-defend-preparing-future-which-thousands-can-release-new-pandemics).
+The concern is that generative AI could be combined with biological design tools to remove the complex technical hurdles to creating and unleashing a dangerous disease. 
+There is debate about whether generative AI makes the process any easier than the internet already does. 
+In [a red-teaming study examining the of planning a biological attack with or without access to an LLM assistant](https://www.rand.org/pubs/research_reports/RRA2977-2.html), researchers found that LLMs currently “do not meaningfully increase the viability of biological weapon attack planning”.
+
 Even in cases where AI systems are being used to improve human health through the development of new drugs to combat disease, the researchers discovered [their algorithm could easily be manipulated to develop biological weapons instead](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9544280/).
 
-The scale of harm from misuse of AI will likely depend on advances in cybersecurity, the responsiveness of lawmakers, and whether each can keep pace with AI development. 
-While the threat of bioterrorism may be the most explicitly existential risk, misuse of AI may undermine several important functions in society that have wider reaching consequences in the long term.
+The scale of these risks depends on the availability of high-quality AI models and actors’ ability to integrate the models into their existing processes. In the future, cybersecurity will likely need to use AI defensively to counter the enhanced capabilities of cybercriminals. If proprietary AI systems can outperform open-source models, coordination between AI companies and cybersecurity experts in government and private enterprise may offer an upper hand to the defensive side. Our information system has yet to come up with a solution to manage the deluge of content that existed before, or since, generative AI became widely available. There are some hopes that AI may enable real-time fact checking for high-profile discussions like political debates, but the monetary incentive to create engaging content (whereby “engaging” often equates to fear- or anger-inducing), and the polarized political environment, are two powerful forces that will continue to undermine the public’s ability to trust information with or without generative AI. 
 
 ## Accidents
 
-Accidents in development and deployment of AI systems is another risk posed by AI systems and may have already caused harm in the form of algorithmic bias in systems that influence hiring decisions, criminal sentencing, and creditworthiness. 
+Accidents are unanticipated or unknowingly harmful actions that occur in development or deployment of AI systems.
+We see the consequences of accidents already in the form of algorithmic bias in systems that influence hiring decisions, criminal sentencing, and creditworthiness.
 As AI systems are integrated into national defense decision-making, the risk of accidents becomes much larger, particularly in the context of nuclear war. 
 To the degree that AI provides a competitive advantage, there will be pressure to prioritize progress over safety and diligence. 
 Militaries will face pressure to deploy autonomous weapons prematurely to ensure victory in a conflict, especially if defeat is looking likely. 
