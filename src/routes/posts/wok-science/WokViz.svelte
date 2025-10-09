@@ -141,7 +141,7 @@
         aria-labelledby="chart-title"
         aria-describedby="chart-description"
         role="img"
-        transition:slide
+        transition:slide|global
       >
         <title id="chart-title">Materials physical properties</title>
         <desc id="chart-description"

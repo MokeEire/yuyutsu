@@ -80,27 +80,27 @@
           {#each tweenedData as d, i}
           <path d="M {xScale(new Date(d.when))} {yScale(0.1)} C {xScale(new Date(d.when))} {yScale(0.1)}, {(xScale(new Date(d.when))+xScale(new Date(d.by)))/2} {yScale(d3.timeYear.count(new Date(d.when), new Date(d.by)))}, {xScale(new Date(d.by))} {yScale(0.1)}" stroke="black" stroke-width=2
                 fill="transparent" 
-                in:draw={{duration: 1200, delay: 200}} 
-                out:fade={{delay:300, duration: 1200}} 
+                in:draw|global={{duration: 1200, delay: 200}} 
+                out:fade|global={{delay:300, duration: 1200}} 
           class="pred-line"/>
           <!-- Create path for each data point -->
           {#if i===step}
             <path d="M {xScale(new Date(d.when))} {yScale(0.1)} C {xScale(new Date(d.when))} {yScale(0.1)}, {(xScale(new Date(d.when))+xScale(new Date(d.by)))/2} {yScale(d3.timeYear.count(new Date(d.when), new Date(d.by)))}, {xScale(new Date(d.by))} {yScale(0.1)}" stroke="black" stroke-width=2
               fill="transparent" 
-              in:draw={{duration: 1200, delay: 200}} out:fade={{delay:100, duration: 600}} 
+              in:draw|global={{duration: 1200, delay: 200}} out:fade|global={{delay:100, duration: 600}} 
               class="current pred-line"/>
             <line x1={xScale(new Date(d.when))+5} x2={xScale(new Date(d.by))-5}
               y1={yScale(0.2)} y2={yScale(0.2)} 
               class="pred-distance"
               stroke="grey" stroke-dasharray="4, 2"
               pointer-events="none"
-              in:draw={{duration: 1200, delay: 200}} out:fade={{duration: 120}}/>
+              in:draw|global={{duration: 1200, delay: 200}} out:fade|global={{duration: 120}}/>
             <text x={(xScale(new Date(d.when))+xScale(new Date(d.by)))/2} y={yScale(1.25)}
               class="pred-distance"
               dominant-baseline="top"
               paint-order="stroke" 
               text-anchor="middle"
-              in:fade={{duration: 1200, delay: 200}} out:fade={{duration: 120}}>{d3.timeYear.count(new Date(d.when), new Date(d.by))} years</text>
+              in:fade|global={{duration: 1200, delay: 200}} out:fade|global={{duration: 120}}>{d3.timeYear.count(new Date(d.when), new Date(d.by))} years</text>
           {/if}
           {/each}
 
