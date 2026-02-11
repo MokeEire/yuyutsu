@@ -13,7 +13,7 @@
         .domain([0, 60])
         .range([height, 0])
 
-    import data from "$lib/data/scatterplotData.js";
+    import { data } from "$lib/data/scatterplotData.js";
   </script>
     
 <svg {width} {height}>
