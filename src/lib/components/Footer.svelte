@@ -11,7 +11,9 @@
     <p>{footerText}</p>
   </footer>
 {:else}
+  
   <footer class="bottom">
+    <hr>
     <div class="about-links">
       {#each links as { title, url, target, icon }}
         <div class="link-item">
@@ -19,25 +21,29 @@
         </div>
       {/each}
     </div>
-    <span>© Mark Barrett {year}.</span>
-    <p>{footerText}</p>
+    
     <p>
       Built with <a href="https://kit.svelte.dev/">SvelteKit</a> using
       <a href="https://github.com/sharu725/yuyutsu">yuyutsu</a> as a template.
     </p>
+
+    <span>© Mark Barrett {year}.</span>
   </footer>
 {/if}
 
 <style>
-  footer {
-    color: #ddd;
-    font-size: 0.9rem;
+  footer, footer p {
+    font-size: 0.85rem;
   }
 
   footer.bottom {
     color: var(--text-color);
     text-align: center;
-    margin: 15vh 0 5vh;
+    margin: 10vh 0 2.5vh;
+  }
+
+  footer.bottom hr {
+    margin: 40px 25%
   }
 
   .about-links {
@@ -46,8 +52,8 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 50%;
-    margin: 0 auto;
+    max-width: 440px;
+    margin: 8px auto;
 }
 
 .link-item {
