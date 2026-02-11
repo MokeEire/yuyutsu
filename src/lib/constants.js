@@ -23,10 +23,10 @@ export const menu = [
 
 export const links = [
   {
-    title: "Resume",
-    url: "https://read.cv/mokeeire",
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/in/markkbarrett/",
     target: "_blank",
-    icon: "https://read.cv/favicon.ico",
+    icon: "/linkedin.png",
   },
   {
     title: "Github",
@@ -39,12 +39,6 @@ export const links = [
     url: "https://public.tableau.com/app/profile/mokeeire/vizzes",
     target: "_blank",
     icon: "/tableau.svg",
-  },
-  {
-    title: "LinkedIn",
-    url: "https://www.linkedin.com/in/markkbarrett/",
-    target: "_blank",
-    icon: "/linkedin.png",
   },
 ];
 
