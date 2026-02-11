@@ -13,9 +13,9 @@ header: /posts/la28/post-image.png
 showHeader: true
 ---
 
-*You can view the full project [here](https://la28-mu.vercel.app/).*
-
 This project explores the accessibility of Los Angeles' proposed Olympic venues by public transit.
 This helped develop my skills working with spatial files, developing visualizations with Svelte and D3, and collecting data with APIs.
+
+*You can view the full project [here](https://transitla2028.netlify.app/).*
 
 Currently, this is only designed to work on desktop.
